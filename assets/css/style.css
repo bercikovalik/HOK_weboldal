@@ -502,6 +502,7 @@ section {
 }
 
 .section-title {
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
@@ -840,8 +841,8 @@ section {
 }
 
 .img-fluid_kolesz{
-  max-width: 101%;
-  height: 80%;
+  max-width: 80%;
+
 }
 
 /*--------------------------------------------------------------
