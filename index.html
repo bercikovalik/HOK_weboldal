@@ -30,6 +30,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -89,7 +92,8 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Üdvözlünk a <span>HÖK</span> oldalán!</h2>
-          <p class="animate__animated fanimate__adeInUp">Örülünk hogy itt vagy! Itt minden hasznos infót megtalálhatsz rólunk, eseményeinkről, a területeinkről,
+          <p class="animate__animated fanimate__adeInUp">Örülünk hogy itt vagy! Itt minden hasznos infót megtalálhatsz
+            rólunk, eseményeinkről, a területeinkről,
             ösztöndíjakról és még sok más mindenről. Ha kérdésed van, keress minket bátran az Elérhetőség résznél!
           </p>
           <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Tovább</a>
@@ -160,19 +164,25 @@
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              A Corvinus Hallgatói Önkormányzat a Budapesti Corvinus Egyetem hallgatóinak hivatalos érdekképviseleti szerve. 
-              A HÖK-ben az egyetemi élet számos részletével foglalkozunk: tanulmányi ügyekben segítünk, az egyetemvezetéssel egyeztetünk, 
-              nappali és esti rendezvényeket tartunk, segítjük a külföldi hallgatókat vagy éppen szervezzük a diákszervezeti-szakkollégiumi 
-              életet. Mindenhol ott vagyunk tehát, de a célunk állandó: szakmailag és közösségileg minőségi egyetemi élet biztosítása a 
+              A Corvinus Hallgatói Önkormányzat a Budapesti Corvinus Egyetem hallgatóinak hivatalos érdekképviseleti
+              szerve.
+              A HÖK-ben az egyetemi élet számos részletével foglalkozunk: tanulmányi ügyekben segítünk, az
+              egyetemvezetéssel egyeztetünk,
+              nappali és esti rendezvényeket tartunk, segítjük a külföldi hallgatókat vagy éppen szervezzük a
+              diákszervezeti-szakkollégiumi
+              életet. Mindenhol ott vagyunk tehát, de a célunk állandó: szakmailag és közösségileg minőségi egyetemi
+              élet biztosítása a
               Corvinus hallgatói számára, mely során az önállóság alapérték!
             </p>
-            
+
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Az érdekképviseletért felelős alelnök alatt az Oktatási Terület, a Diákszervezeti és Szakkollégiumi Terület, 
-              a Nemzetközi Terület és a Hallgatói Szociális Bizottság dolgozik. A menedzsmentért felelős alelnök alatt működik a
-               Kommunikációs Terület, a Gazdasági Terület, a Rendezvényszervezési Terület és a HR Terület.
+              Az érdekképviseletért felelős alelnök alatt az Oktatási Terület, a Diákszervezeti és Szakkollégiumi
+              Terület,
+              a Nemzetközi Terület és a Hallgatói Szociális Bizottság dolgozik. A menedzsmentért felelős alelnök alatt
+              működik a
+              Kommunikációs Terület, a Gazdasági Terület, a Rendezvényszervezési Terület és a HR Terület.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> Több mint 100 taggal jelentős méretű szervezet</li>
@@ -240,7 +250,7 @@
                     <div class="bar cf" data-percent="4.87"><span class="label">BSc 5</span></div>
                     <div class="bar cf" data-percent="3.95"><span class="label light">BSc 6</span></div>
                     <div class="bar cf" data-percent="4.56"><span class="label">BSc 7</span></div>
-                    
+
                   </div>
                 </div>
               </div>
@@ -281,35 +291,173 @@
               </div>
             </div>
           </div>
+
+          <!-- TAB 3: Ösztöndíj kalkulátor (csak itt jelenik meg) -->
           <div class="tab-pane" id="tab-3">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Voluptatibus commodi ut accusamus ea repudiandae ut autem dolor ut assumenda</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                  sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+            <div class="row g-4 align-items-center py-4">
+              <!-- BAL: Kalkulátor -->
+              <div class="col-lg-6">
+                <h3 class="mb-3">Ösztöndíj-kalkulátor</h3>
+                <p class="text-muted mb-4">
+                  Add meg a tárgyakat, a kreditértéket és az érdemjegyet.  <br> Az átlag számítása:
+                  <code>Σ(kredit × jegy) / 30</code>.
                 </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
-                  </li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a.
-                    Ipsum neque dolor voluptate nisi sed.</li>
-                </ul>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
-                </p>
+
+                <div id="oszto-alert" class="alert alert-danger d-none" role="alert">
+                  Nincs minden mező kitöltve vagy érvényes tartományban.
+                </div>
+
+                <div id="oszto-subjects" class="vstack gap-3"></div>
+
+                <div class="d-flex gap-2 mt-3">
+                  <button id="oszto-add" type="button" class="btn btn-outline-primary">
+                    + Tárgy hozzáadása
+                  </button>
+                  <button id="oszto-calc" type="button" class="btn btn-primary ms-auto">
+                    Számolás
+                  </button>
+                </div>
+
+                <div class="mt-4">
+                  <h5 class="mb-1">Ösztöndíj átlag:</h5>
+                  <div id="oszto-result" class="fs-4 fw-bold">–</div>
+                </div>
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-3.png" alt="" class="img-fluid">
+
+              <!-- JOBB: Kép -->
+              <div class="col-lg-6 text-center">
+                <img src="assets/img/features-3.png" alt="Ösztöndíj" class="img-fluid rounded-3 shadow-sm">
               </div>
             </div>
           </div>
+          <!-- /TAB 3 -->
+
+          <style>
+            .subject-row {
+              border: 1px solid rgba(0, 0, 0, .08);
+              border-radius: .75rem;
+              padding: .75rem;
+              background: #fff;
+            }
+
+            .subject-row .form-label {
+              font-weight: 600;
+            }
+
+            .subject-row .remove-btn {
+              visibility: hidden;
+            }
+
+            .subject-row:hover .remove-btn {
+              visibility: visible;
+            }
+          </style>
+
+          <script>
+            (function () {
+              const pane = document.getElementById('tab-3');
+              let initialized = false;
+
+              function createSubjectRow(subjectsEl, values = {}) {
+                const row = document.createElement('div');
+                row.className = 'subject-row';
+                row.innerHTML = `
+        <div class="row g-3 align-items-end">
+          <div class="col-12 col-md-6">
+            <label class="form-label">Tárgy neve</label>
+            <input type="text" class="form-control subject-name" placeholder="pl. Statisztika II" value="${values.name ?? ''}">
+          </div>
+          <div class="col-6 col-md-3">
+            <label class="form-label">Kredit</label>
+            <input type="number" class="form-control subject-credit" min="1" step="1" placeholder="pl. 4" value="${values.credit ?? ''}">
+          </div>
+          <div class="col-6 col-md-2">
+            <label class="form-label">Jegy (1–5)</label>
+            <input type="number" class="form-control subject-grade" min="1" max="5" step="1" placeholder="pl. 5" value="${values.grade ?? ''}">
+          </div>
+          <div class="col-12 col-md-1 text-end">
+            <button type="button" class="btn btn-outline-danger btn-sm remove-btn" title="Tárgy eltávolítása">&times;</button>
+          </div>
+        </div>
+      `;
+                row.querySelector('.remove-btn').addEventListener('click', () => {
+                  row.remove();
+                  if (!subjectsEl.querySelector('.subject-row')) {
+                    // ha minden sort töröltünk, visszateszünk egy üreset
+                    createSubjectRow(subjectsEl, { name: '', credit: '', grade: '' });
+                  }
+                });
+                subjectsEl.appendChild(row);
+              }
+
+              function initCalculatorOnce() {
+                if (initialized) return;
+                initialized = true;
+
+                const subjectsEl = pane.querySelector('#oszto-subjects');
+                const addBtn = pane.querySelector('#oszto-add');
+                const calcBtn = pane.querySelector('#oszto-calc');
+                const alertEl = pane.querySelector('#oszto-alert');
+                const resultEl = pane.querySelector('#oszto-result');
+
+                // ALAPSOR (üres minta)
+                createSubjectRow(subjectsEl);
+
+                // + Tárgy hozzáadása
+                addBtn.addEventListener('click', () => createSubjectRow(subjectsEl));
+
+                // Számolás
+                calcBtn.addEventListener('click', () => {
+                  alertEl.classList.add('d-none');
+                  const rows = subjectsEl.querySelectorAll('.subject-row');
+                  if (rows.length === 0) {
+                    alertEl.textContent = 'Adj hozzá legalább egy tárgyat.';
+                    alertEl.classList.remove('d-none');
+                    resultEl.textContent = '–';
+                    return;
+                  }
+
+                  let sum = 0;
+                  for (const row of rows) {
+                    const credit = Number(row.querySelector('.subject-credit').value);
+                    const grade = Number(row.querySelector('.subject-grade').value);
+
+                    const validCredit = Number.isFinite(credit) && credit > 0; // nincs felső korlát
+                    const validGrade = Number.isFinite(grade) && grade >= 1 && grade <= 5;
+
+                    if (!validCredit || !validGrade) {
+                      alertEl.textContent = 'Nincs minden mező kitöltve vagy érvényes tartományban.';
+                      alertEl.classList.remove('d-none');
+                      resultEl.textContent = '–';
+                      return;
+                    }
+                    sum += credit * grade;
+                  }
+
+                  const avg = sum / 30;
+                  resultEl.textContent = avg.toFixed(2).replace('.', ',');
+                });
+              }
+
+              // Bootstrap tab esemény – amikor a 3. fülre váltanak, inicializálunk
+              document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
+                tab.addEventListener('shown.bs.tab', (e) => {
+                  if (e.target.getAttribute('href') === '#tab-3') {
+                    initCalculatorOnce();
+                  }
+                });
+              });
+
+              // Ha oldalbetöltéskor már a #tab-3 aktív, akkor is inicializáljuk
+              if (pane.classList.contains('active') || pane.classList.contains('show')) {
+                initCalculatorOnce();
+              }
+            })();
+          </script>
+
+
+          <!-- Ösztöndíj kalkulátor vége -->
+
           <div class="tab-pane" id="tab-4">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
@@ -378,7 +526,8 @@
             <div class="icon-box" data-aos="zoom-in-left">
               <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
               <h4 class="title scrollto"><a href="#teruletek">Területeink</a></h4>
-              <p class="description">Tudj meg mindent a HÖK területeiről, mivel foglalkoznak, kik a vezetőik és elérhetőségeket is találhatsz</p>
+              <p class="description">Tudj meg mindent a HÖK területeiről, mivel foglalkoznak, kik a vezetőik és
+                elérhetőségeket is találhatsz</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
@@ -439,78 +588,132 @@
 
         <ul id="portfolio-flters" class="d-flex justify-content-end" data-aos="fade-up">
           <li data-filter="*" class="filter-active">Összes</li>
-          <li data-filter=".filter-app">Lorem</li>
-          <li data-filter=".filter-card">Lorem</li>
-          <li data-filter=".filter-web">Lorem</li>
+          <li data-filter=".bulik">Közgáz Bulik</li>
+          <li data-filter=".filter-card">Sporthét</li>
+          <li data-filter=".filter-web">Gólyahét</li>
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/6.jpg" class="img-fluid" alt=""></div>
+          <div class="col-lg-4 col-md-6 portfolio-item bulik">
+            <div class="portfolio-img"><img src="assets/img/bulik/dojo_season_op.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Közgáz Évzáró Fesztivál</h4>
-              <p>Lorem</p>
-              <a href="assets/img/6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
-                title="App 1"><i class="bx bx-plus"></i></a>
+              <h4>Corvinus Szemeszternyitó</h4>
+              <p>2025.09.18 - DOJO boutique club</p>
+              <a href="assets/img/bulik/dojo_season_op.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Dojo Season Opening"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
           </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item bulik">
+            <div class="portfolio-img"><img src="assets/img/bulik/dojo_season_op2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Corvinus Szemeszternyitó</h4>
+              <p>2025.09.18 - DOJO boutique club</p>
+              <a href="assets/img/bulik/dojo_season_op2.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <style>
+            .video-box {
+              position: relative;
+              width: 100%;
+              aspect-ratio: 9 / 16;
+              /* vízszintes videónál: 16 / 9 */
+              overflow: hidden;
+              border-radius: 8px;
+              background: #000 center/cover no-repeat;
+              /* ide tesszük a posztert is */
+            }
+
+            .video-box video {
+              position: absolute;
+              inset: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+              background: transparent;
+              /* ne feketítse ki */
+            }
+
+            /* Ha elindul a videó, vegyük le a háttérképet */
+            .video-box.is-playing {
+              background-image: none !important;
+            }
+          </style>
+
+          <div class="col-lg-4 col-md-6 portfolio-item bulik">
+            <div class="portfolio-img video-box">
+              <video poster="assets/img/bulik/dojo_after_movie-1-thumb.jpg" preload="metadata" playsinline muted
+                controls>
+                <source src="assets/img/bulik/dojo_after_movie-1-vertical.mp4" type="video/mp4">
+                A böngésződ nem támogatja a videó lejátszást.
+              </video>
+            </div>
+          </div>
+
+          <script>
+            // posztert háttérképnek is beállítjuk, és lejátszáskor eltüntetjük
+            document.querySelectorAll('.video-box').forEach(box => {
+              const v = box.querySelector('video');
+              const poster = v?.getAttribute('poster');
+              if (poster) {
+                box.style.backgroundImage = `url('${poster}')`;
+              }
+              const playing = () => box.classList.add('is-playing');
+              const maybeShowPoster = () => {
+                if (v.paused && (v.currentTime === 0 || v.ended)) {
+                  box.classList.remove('is-playing');
+                }
+              };
+              v.addEventListener('play', playing);
+              v.addEventListener('playing', playing);
+              v.addEventListener('pause', maybeShowPoster);
+              v.addEventListener('ended', maybeShowPoster);
+              v.addEventListener('emptied', () => box.classList.remove('is-playing'));
+            });
+          </script>
+
+          <div class="col-lg-4 col-md-6 portfolio-item bulik">
+            <div class="portfolio-img"><img src="assets/img/bulik/dojo_egy.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Közgáz & Friends</h4>
+              <p>2024.09.25 - DOJO boutique club</p>
+              <a href="assets/img/bulik/dojo_egy.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/5.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img/bulik/onedance.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Corvinus Mester Gólyatábor</h4>
-              <p>Lorem</p>
-              <a href="assets/img/5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
-                title="Web 3"><i class="bx bx-plus"></i></a>
+              <h4>Corvinus Szemeszternyitó</h4>
+              <p>2024.09.12 - Ötkert</p>
+              <a href="assets/img/bulik/onedance.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/7.jpg" class="img-fluid" alt=""></div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item bulik">
+            <div class="portfolio-img"><img src="assets/img/bulik/dojo_membersonly.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Corvinus Sörpong Bajnokság</h4>
-              <p>Lorem</p>
-              <a href="assets/img/7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
-                title="App 2"><i class="bx bx-plus"></i></a>
+              <h4>Közgáz & Friends - Members Only</h4>
+              <p>2025.02.19 - DOJO boutique club</p>
+              <a href="assets/img/bulik/dojo_membersonly.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/4.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Diákszervezeti Vezetőképző</h4>
-              <p>Lorem</p>
-              <a href="assets/img/4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
-                title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/1.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Corvinus Sporthét</h4>
-              <p>Lorem</p>
-              <a href="assets/img/1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
-                title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/2.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>CorvinICE</h4>
-              <p>Lorem</p>
-              <a href="assets/img/2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
-                title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-img"><img src="assets/img/8.jpg" class="img-fluid" alt=""></div>
@@ -552,7 +755,7 @@
     <!-- End  Section -->
     <!-- Start Kollegium Section -->
 
-    
+
     <!-- ======= Hasznos Section ======= -->
     <section id="about" class="faq">
       <div class="container">
@@ -668,87 +871,163 @@
 
         <div class="section-title" data-aos="zoom-out">
           <h2>Rólunk</h2>
-          <p>Munkatársaink</p>
+          <p>Vezetőség</p>
         </div>
 
-        <div class="row">
+        <!-- Swiper -->
+        <div class="swiper teamSwiper">
+          <div class="swiper-wrapper">
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+            <!-- === 1. tag === -->
+            <div class="swiper-slide">
+              <div class="member" data-aos="fade-up">
+                <div class="member-img">
+                  <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Mészner Gerike</h4>
+                  <span>Fő Boss</span>
                 </div>
               </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+            <!-- === 2. tag === -->
+            <div class="swiper-slide">
+              <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img">
+                  <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Product Manager</span>
                 </div>
               </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+            <!-- === 3. tag === -->
+            <div class="swiper-slide">
+              <div class="member" data-aos="fade-up" data-aos-delay="200">
+                <div class="member-img">
+                  <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>William Anderson</h4>
+                  <span>CTO</span>
                 </div>
               </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+            <!-- === 4. tag === -->
+            <div class="swiper-slide">
+              <div class="member" data-aos="fade-up" data-aos-delay="300">
+                <div class="member-img">
+                  <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
                 </div>
               </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+            </div>
+
+            <!-- === 5. tag === -->
+            <div class="swiper-slide">
+              <div class="member" data-aos="fade-up" data-aos-delay="300">
+                <div class="member-img">
+                  <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                </div>
               </div>
             </div>
+
+
+            <!-- === 6. tag === -->
+            <div class="swiper-slide">
+              <div class="member" data-aos="fade-up" data-aos-delay="300">
+                <div class="member-img">
+                  <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                </div>
+              </div>
+            </div>
+
           </div>
 
+          <!-- Lapozó nyilak és pöttyök -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-
       </div>
-    </section><!-- End Team Section -->
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".teamSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          320: { slidesPerView: 1 },
+          576: { slidesPerView: 2 },
+          992: { slidesPerView: 3 },
+          1200: { slidesPerView: 4 },
+        },
+      });
+    </script>
+
+    <!-- End Team Section -->
 
     <section id="teruletek" class="about">
       <div class="container">
@@ -761,10 +1040,13 @@
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az elnök személyéről 
+              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az
+              elnök személyéről
               kétévente, az alelnökökről évente közvetve dönthetnek a hallgatók a Küldöttgyűlés-választásokon.
-              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb célkitűzéseik a hallgatói 
-              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső demokratikus működés növelése.
+              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb
+              célkitűzéseik a hallgatói
+              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső
+              demokratikus működés növelése.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> 400 fős</li>
@@ -808,10 +1090,13 @@
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az elnök személyéről 
+              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az
+              elnök személyéről
               kétévente, az alelnökökről évente közvetve dönthetnek a hallgatók a Küldöttgyűlés-választásokon.
-              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb célkitűzéseik a hallgatói 
-              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső demokratikus működés növelése.
+              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb
+              célkitűzéseik a hallgatói
+              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső
+              demokratikus működés növelése.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> 400 fős</li>
@@ -846,7 +1131,7 @@
             <a href="#" class="btn-learn-more">Részletek</a>
           </div>
         </div>
-        
+
         <div class="section-title" data-aos="zoom-out">
           <h2>Területeink</h2>
           <p>Rendezvényszervezési Terület</p>
@@ -855,10 +1140,13 @@
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az elnök személyéről 
+              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az
+              elnök személyéről
               kétévente, az alelnökökről évente közvetve dönthetnek a hallgatók a Küldöttgyűlés-választásokon.
-              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb célkitűzéseik a hallgatói 
-              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső demokratikus működés növelése.
+              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb
+              célkitűzéseik a hallgatói
+              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső
+              demokratikus működés növelése.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> 400 fős</li>
@@ -870,7 +1158,7 @@
             <img src="assets/img/demo.svg" alt="" class="img-fluid_kolesz">
           </div>
         </div>
-        
+
         <div class="section-title" data-aos="zoom-out">
           <h2>Területeink</h2>
           <p>Oktatási Terület</p>
@@ -902,10 +1190,13 @@
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az elnök személyéről 
+              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az
+              elnök személyéről
               kétévente, az alelnökökről évente közvetve dönthetnek a hallgatók a Küldöttgyűlés-választásokon.
-              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb célkitűzéseik a hallgatói 
-              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső demokratikus működés növelése.
+              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb
+              célkitűzéseik a hallgatói
+              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső
+              demokratikus működés növelése.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> 400 fős</li>
@@ -926,10 +1217,13 @@
         <div class="row content" data-aos="fade-up">
           <div class="col-lg-6">
             <p>
-              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az elnök személyéről 
+              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az
+              elnök személyéről
               kétévente, az alelnökökről évente közvetve dönthetnek a hallgatók a Küldöttgyűlés-választásokon.
-              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb célkitűzéseik a hallgatói 
-              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső demokratikus működés növelése.
+              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb
+              célkitűzéseik a hallgatói
+              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső
+              demokratikus működés növelése.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> 400 fős</li>
