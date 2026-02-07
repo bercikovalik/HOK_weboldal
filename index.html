@@ -10,15 +10,15 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/fav.png" rel="icon">
-  <link href="assets/img/apple.png" rel="apple-touch-icon">
+  <link href="assets/img-optimized/fav.png" rel="icon">
+  <link href="assets/img-optimized/apple.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,22 +26,21 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!-- CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
+  <!-- Header -->
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
       <div class="logo">
-        <a href="index.html"><img src="assets/img/Corvomadar-removebg-preview.png" alt="" class="img-fluid"></a>
+        <a href="index.html"><img src="assets/img-optimized/Corvomadar-removebg-preview.png" alt="" class="img-fluid"></a>
       </div>
       <div class="logo">
         <h1><a class="Corvo" href="index.html">CORVINUS HÖK</a></h1>
@@ -53,10 +52,11 @@
           <li class="dropdown nav-link scrollto"><a href="#osztondij"><span>Ösztöndíjak</span> <i
                 class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Ösztöndíjmutatók</a></li>
-              <li><a href="#">Közéleti pályázat</a></li>
-              <li><a href="#">Kalkulátor</a></li>
-
+              <li><a href="#osztondij" class="scholarship-nav-link active" data-tab="tab-1" onclick="window.handleScholarshipClick && window.handleScholarshipClick(event, this)">Corvinus ösztöndíj</a></li>
+              <li><a href="#osztondij" class="scholarship-nav-link" data-tab="tab-2" onclick="window.handleScholarshipClick && window.handleScholarshipClick(event, this)">Teljesítményalapú</a></li>
+              <li><a href="#osztondij" class="scholarship-nav-link" data-tab="tab-3" onclick="window.handleScholarshipClick && window.handleScholarshipClick(event, this)">Szociális</a></li>
+              <li><a href="#osztondij" class="scholarship-nav-link" data-tab="tab-4" onclick="window.handleScholarshipClick && window.handleScholarshipClick(event, this)">Közéleti</a></li>
+              <li><a href="#osztondij" class="scholarship-nav-link" data-tab="tab-5" onclick="window.handleScholarshipClick && window.handleScholarshipClick(event, this)">Kalkulátor & Statisztikák</a></li>
             </ul>
           </li>
           <li class="dropdown nav-link scrollto"><a href="#hasznos"><span>Hasznos</span> <i
@@ -66,14 +66,13 @@
               <li><a href="#hasznos">Office 365 regisztráció</a></li>
               <li><a href="#hasznos">Fogadóórák</a></li>
               <li><a href="#hasznos">Hallgatói tér</a></li>
-
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#hallgatoi">Hallgatói élet</a></li>
-          <li><a class="nav-link scrollto" href="#about">Átláthatóság</a></li>
-          <li><a class="nav-link scrollto" href="#rolunk">Rólunk</a></li>
+          <li><a class="nav-link" href="atlathatosag.html">Átláthatóság</a></li>
+          <li><a class="nav-link" href="rolunk.html">Rólunk</a></li>
           <li><a class="nav-link scrollto" href="#contact">Elérhetőség</a></li>
-          <li><a class="nav-link scrollto" href="#ISC">International Student Club</a></li>
+          <li><a class="nav-link scrollto" href="https://www.uni-corvinus.hu/post/hir/opportunities-for-internationals-the-international-student-club/?lang=en" target="_blank">International Student Club</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -84,41 +83,43 @@
     </div>
   </header>
 
-  <!-- ======= Hero Section ======= -->
+  <!-- Hero -->
   <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
     <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
 
-      <!-- Slide 1 -->
+      <!-- Slide 1: Üdvözlő -->
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Üdvözlünk a <span>HÖK</span> oldalán!</h2>
-          <p class="animate__animated fanimate__adeInUp">Örülünk hogy itt vagy! Itt minden hasznos infót megtalálhatsz
-            rólunk, eseményeinkről, a területeinkről,
-            ösztöndíjakról és még sok más mindenről. Ha kérdésed van, keress minket bátran az Elérhetőség résznél!
-          </p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Tovább</a>
+          <p class="animate__animated animate__fadeInUp">A Corvinus Hallgatói Önkormányzat hivatalos oldala. Megtalálsz minket, ha ösztöndíjakról, rendezvényekről, vagy hallgatói ügyekről szeretnél tájékozódni. Kérdésed van? Keress minket bátran!</p>
+          <a href="rolunk.html" class="btn-get-started animate__animated animate__fadeInUp">Ismerj meg minket</a>
         </div>
       </div>
 
-      <!-- Slide 2 -->
+      <!-- Slide 2: Ösztöndíjak -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Nézd meg az <span>ösztöndíjakat</span>!</h2>
+          <p class="animate__animated animate__fadeInUp">Nézd meg, mire vagy jogosult!</p>
+          <a href="#osztondij" class="btn-get-started animate__animated animate__fadeInUp scrollto">Ösztöndíjak</a>
+        </div>
+      </div>
+
+      <!-- Slide 3: Programok -->
       <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Programjaink</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut
-            et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse
-            doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#" class="btn-get-started animate__animated animate__fadeInUp scrollto">Részletek</a>
+          <p class="animate__animated animate__fadeInUp">Gólyapart, Sporthét, Közgáz Bulik és még sok más! A HÖK egész évben színes programokkal várja az egyetem hallgatóit. Nézd meg az eseménynaptárat!</p>
+          <a href="#hallgatoi" class="btn-get-started animate__animated animate__fadeInUp scrollto">Események</a>
         </div>
       </div>
 
-      <!-- Slide 3 -->
+      <!-- Slide 4: Csatlakozz -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Jelentkezz a HÖK-be!</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut
-            et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse
-            doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#" class="btn-get-started animate__animated animate__fadeInUp scrollto">Részletek</a>
+          <h2 class="animate__animated animate__fadeInDown">Jelentkezz a <span>HÖK-be!</span>!</h2>
+          <p class="animate__animated animate__fadeInUp">Szeretnél aktívan részt venni az egyetemi életben? Jelentkezz a HÖK valamelyik területére! Rendezvényszervezés, kommunikáció, nemzetközi kapcsolatok – nálunk mindenki megtalálja a helyét.</p>
+          <a href="#contact" class="btn-get-started animate__animated animate__fadeInUp scrollto">Jelentkezem</a>
         </div>
       </div>
 
@@ -148,11 +149,11 @@
       </g>
     </svg>
 
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
 
-    <!-- ======= Help ======= -->
+    <!-- Help -->
     <section id="#" class="about">
       <div class="container">
 
@@ -195,9 +196,7 @@
       </div>
     </section>
 
-    <!-- End Help Section -->
-
-    <!-- ======= Osztondij Section ======= -->
+    <!-- Osztondij -->
     <section id="osztondij" class="features">
       <div class="container">
 
@@ -206,156 +205,1278 @@
           <p>Ösztöndíj információk</p>
         </div>
 
-        <ul class="nav nav-tabs row d-flex">
-          <li class="nav-item col-3" data-aos="zoom-in">
-            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="ri-gps-line"></i>
-              <h4 class="d-none d-lg-block">Ösztöndíj mutatók</h4>
+        <ul class="nav nav-tabs row d-flex scholarship-tabs-premium">
+          <li class="nav-item col-lg-2 col-md-4 col-6" data-aos="zoom-in">
+            <a class="nav-link active show" href="#tab-1">
+              <i class="ri-award-line"></i>
+              <h4 class="d-none d-lg-block">Corvinus</h4>
             </a>
           </li>
-          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-              <i class="ri-body-scan-line"></i>
-              <h4 class="d-none d-lg-block">Közéleti pályázat</h4>
+          <li class="nav-item col-lg-2 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="50">
+            <a class="nav-link" href="#tab-2">
+              <i class="ri-trophy-line"></i>
+              <h4 class="d-none d-lg-block">Teljesítmény</h4>
             </a>
           </li>
-          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-              <i class="ri-sun-line"></i>
-              <h4 class="d-none d-lg-block">Ösztöndíj kalkulátor</h4>
+          <li class="nav-item col-lg-2 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="100">
+            <a class="nav-link" href="#tab-3">
+              <i class="ri-hand-heart-line"></i>
+              <h4 class="d-none d-lg-block">Szociális</h4>
             </a>
           </li>
-          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
-              <i class="ri-store-line"></i>
-              <h4 class="d-none d-lg-block">Nostrum qui dile node</h4>
+          <li class="nav-item col-lg-2 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="150">
+            <a class="nav-link" href="#tab-4">
+              <i class="ri-community-line"></i>
+              <h4 class="d-none d-lg-block">Közéleti</h4>
+            </a>
+          </li>
+          <li class="nav-item col-lg-2 col-md-4 col-6 offset-md-2 offset-lg-0" data-aos="zoom-in" data-aos-delay="200">
+            <a class="nav-link" href="#tab-5">
+              <i class="ri-tools-line"></i>
+              <h4 class="d-none d-lg-block">Kalkulátor</h4>
             </a>
           </li>
         </ul>
 
-        <div class="tab-content" data-aos="fade-up">
-          <div class="tab-pane active show" id="tab-1">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Csoport átlagok</h3>
-                <p class="fst-italic">
-                  Ezen az oldalon összegyűjtöttük a tanulmányi mutatószámokkal kapcsolatos legfontosabb információkat.
-                </p>
-                <div class="wrap">
-                  <div class="holder">
-                    <div class="bar cf" data-percent="4.93"><span class="label">BSc 1</span></div>
-                    <div class="bar cf" data-percent="4.21"><span class="label light">BSc 2</span></div>
-                    <div class="bar cf" data-percent="4.50"><span class="label">BSc 3</span></div>
-                    <div class="bar cf" data-percent="3.92"><span class="label light">Bsc 4</span></div>
-                    <div class="bar cf" data-percent="4.87"><span class="label">BSc 5</span></div>
-                    <div class="bar cf" data-percent="3.95"><span class="label light">BSc 6</span></div>
-                    <div class="bar cf" data-percent="4.56"><span class="label">BSc 7</span></div>
+        <style>
+          .scholarship-tabs-premium {
+            margin-bottom: 30px;
+            gap: 12px;
+            padding: 0;
+            justify-content: center;
+          }
 
+          @media (min-width: 992px) {
+            .scholarship-tabs-premium {
+              display: flex !important;
+              flex-wrap: nowrap;
+              justify-content: stretch;
+            }
+
+            .scholarship-tabs-premium .nav-item {
+              flex: 1;
+              max-width: none;
+              width: auto;
+            }
+          }
+
+          .scholarship-tabs-premium .nav-item {
+            padding: 0;
+            margin-bottom: 0;
+          }
+
+          .scholarship-tabs-premium .nav-link {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px 12px;
+            transition: all 0.2s ease;
+            background: #ffffff;
+            box-shadow: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90px;
+            color: #013649;
+            font-weight: 600;
+            font-family: "Argentum Sans Regular", sans-serif;
+          }
+
+          .scholarship-tabs-premium .nav-link i {
+            font-size: 32px;
+            padding: 0;
+            margin-bottom: 6px;
+            color: #013649;
+            transition: all 0.2s ease;
+          }
+
+          .scholarship-tabs-premium .nav-link h4 {
+            font-size: 12px;
+            margin: 0;
+            color: #013649;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            transition: all 0.2s ease;
+            text-align: center;
+            line-height: 1.3;
+            font-family: "Argentum Sans Regular", sans-serif;
+          }
+
+          .scholarship-tabs-premium .nav-link:hover {
+            border-color: #013649;
+            background: #faf8f7;
+          }
+
+          .scholarship-tabs-premium .nav-link.active,
+          .scholarship-tabs-premium .nav-link.show {
+            background: #013649;
+            border-color: #013649;
+            color: #ffffff;
+          }
+
+          .scholarship-tabs-premium .nav-link.active i,
+          .scholarship-tabs-premium .nav-link.show i {
+            color: #ffffff;
+          }
+
+          .scholarship-tabs-premium .nav-link.active h4,
+          .scholarship-tabs-premium .nav-link.show h4 {
+            color: #ffffff;
+          }
+
+          @media (min-width: 1200px) {
+            .scholarship-tabs-premium .nav-link {
+              padding: 20px 16px;
+              height: 100px;
+              border-radius: 10px;
+            }
+
+            .scholarship-tabs-premium .nav-link i {
+              font-size: 36px;
+              margin-bottom: 8px;
+            }
+
+            .scholarship-tabs-premium .nav-link h4 {
+              font-size: 13px;
+            }
+          }
+
+          @media (min-width: 992px) and (max-width: 1199px) {
+            .scholarship-tabs-premium .nav-link {
+              padding: 18px 12px;
+              height: 95px;
+            }
+
+            .scholarship-tabs-premium .nav-link i {
+              font-size: 34px;
+            }
+
+            .scholarship-tabs-premium .nav-link h4 {
+              font-size: 12px;
+            }
+          }
+
+          @media (min-width: 768px) and (max-width: 991px) {
+            .scholarship-tabs-premium {
+              display: flex !important;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 12px;
+            }
+
+            .scholarship-tabs-premium .nav-item {
+              flex: 0 0 auto;
+              width: calc(33.333% - 10px);
+              max-width: calc(33.333% - 10px);
+            }
+
+            .scholarship-tabs-premium .nav-item:nth-child(4),
+            .scholarship-tabs-premium .nav-item:nth-child(5) {
+              width: calc(33.333% - 10px);
+            }
+
+            .scholarship-tabs-premium .nav-link {
+              padding: 16px 10px;
+              height: 88px;
+              border-radius: 8px;
+            }
+
+            .scholarship-tabs-premium .nav-link i {
+              font-size: 32px;
+            }
+
+            .scholarship-tabs-premium .nav-link h4 {
+              font-size: 11px;
+            }
+          }
+
+          @media (min-width: 576px) and (max-width: 767px) {
+            .scholarship-tabs-premium {
+              display: flex !important;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 10px;
+            }
+
+            .scholarship-tabs-premium .nav-item {
+              flex: 0 0 auto;
+              width: calc(33.333% - 8px);
+              max-width: calc(33.333% - 8px);
+            }
+
+            .scholarship-tabs-premium .nav-link {
+              padding: 14px 8px;
+              height: 82px;
+              border-radius: 8px;
+            }
+
+            .scholarship-tabs-premium .nav-link i {
+              font-size: 28px;
+              margin-bottom: 5px;
+            }
+
+            .scholarship-tabs-premium .nav-link h4 {
+              font-size: 10.5px;
+            }
+          }
+
+          @media (max-width: 575px) {
+            .scholarship-tabs-premium {
+              display: grid !important;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+              margin-bottom: 24px;
+              padding: 0 4px;
+            }
+
+            .scholarship-tabs-premium .nav-item {
+              width: 100%;
+            }
+
+            .scholarship-tabs-premium .nav-item:last-child {
+              grid-column: 1 / -1;
+              max-width: 50%;
+              justify-self: center;
+            }
+
+            .scholarship-tabs-premium .nav-link {
+              padding: 14px 8px;
+              height: 80px;
+              border-radius: 8px;
+              width: 100%;
+            }
+
+            .scholarship-tabs-premium .nav-link i {
+              font-size: 26px;
+              margin-bottom: 5px;
+            }
+
+            .scholarship-tabs-premium .nav-link h4 {
+              font-size: 11px;
+            }
+          }
+
+          @media (max-width: 374px) {
+            .scholarship-tabs-premium {
+              gap: 8px;
+            }
+
+            .scholarship-tabs-premium .nav-link {
+              padding: 12px 6px;
+              height: 72px;
+            }
+
+            .scholarship-tabs-premium .nav-link i {
+              font-size: 22px;
+              margin-bottom: 4px;
+            }
+
+            .scholarship-tabs-premium .nav-link h4 {
+              font-size: 10px;
+            }
+          }
+
+          .tab-content {
+            position: relative;
+          }
+
+          .tab-content .tab-pane {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+          }
+
+          .tab-content .tab-pane.active {
+            display: block;
+            opacity: 1;
+          }
+        </style>
+
+        <script>
+          (function() {
+            'use strict';
+
+            document.addEventListener('DOMContentLoaded', function() {
+              // Get all scholarship tab links
+              const tabLinks = document.querySelectorAll('.scholarship-tabs-premium .nav-link');
+
+              // Manually handle tab switching
+              tabLinks.forEach(function(tabLink) {
+                tabLink.addEventListener('click', function(e) {
+                  e.preventDefault();
+
+                  // Remove active and show classes from all tabs
+                  tabLinks.forEach(function(link) {
+                    link.classList.remove('active', 'show');
+                  });
+
+                  // Add active and show to clicked tab
+                  this.classList.add('active', 'show');
+
+                  // Get the target tab pane
+                  const targetId = this.getAttribute('href');
+                  const targetPane = document.querySelector(targetId);
+
+                  if (targetPane) {
+                    // Hide all tab panes INSTANTLY (no delay)
+                    const allPanes = document.querySelectorAll('.tab-content .tab-pane');
+                    allPanes.forEach(function(pane) {
+                      pane.classList.remove('active', 'show');
+                    });
+
+                    // Show target pane INSTANTLY (CSS handles the smooth opacity transition)
+                    targetPane.classList.add('active', 'show');
+                  }
+
+                  // Szinkronizáljuk a dropdown menü aktív állapotát (globális függvény)
+                  const activeTabId = targetId.replace('#', '');
+                  if (window.syncScholarshipDropdownActive) {
+                    window.syncScholarshipDropdownActive(activeTabId);
+                  }
+
+                  // Ha tab-5 (Kalkulátor), inicializáljuk a kalkulátort
+                  if (activeTabId === 'tab-5' && window.initCalculatorIfNeeded) {
+                    setTimeout(function() {
+                      window.initCalculatorIfNeeded();
+                    }, 50);
+                  }
+                });
+              });
+
+              // Ensure first tab is active on page load
+              const firstTab = document.querySelector('.scholarship-tabs-premium .nav-link:first-child');
+              const firstPane = document.querySelector('.tab-content .tab-pane:first-child');
+
+              if (firstTab && firstPane) {
+                // Remove active from all
+                tabLinks.forEach(link => link.classList.remove('active', 'show'));
+                document.querySelectorAll('.tab-content .tab-pane').forEach(pane => {
+                  pane.classList.remove('active', 'show');
+                });
+
+                // Set first as active
+                firstTab.classList.add('active', 'show');
+                firstPane.classList.add('active', 'show');
+              }
+            });
+          })();
+        </script>
+
+        <div class="tab-content" data-aos="fade-up">
+          <!-- TAB 1: Corvinus ösztöndíj -->
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row g-4 py-4">
+              <div class="col-12">
+                <div class="scholarship-content-card">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                      <h3><i class="ri-award-line"></i> Corvinus ösztöndíj</h3>
+                      <p class="lead">
+                        A Corvinus ösztöndíj a legkiválóbb tanulmányi eredményt elért hallgatók elismerésére szolgál.
+                      </p>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-checkbox-circle-line"></i> Feltételek:</h5>
+                        <ul class="scholarship-list">
+                          <li>Nappali tagozatos képzésben való részvétel</li>
+                          <li>Kimagasló tanulmányi eredmény (jellemzően a szak legjobb hallgatói)</li>
+                          <li>A szakon belüli rangsor alapján automatikus odaítélés</li>
+                          <li>További speciális feltételek a szakonként eltérhetnek</li>
+                        </ul>
+                      </div>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-information-line"></i> Tudnivalók:</h5>
+                        <p>
+                          A Corvinus ösztöndíjas helyek száma és aránya szakonként változik. Az ösztöndíjban részesülők
+                          automatikusan felkerülnek a rangsor élére a tanulmányi eredményük alapján.
+                        </p>
+                      </div>
+
+                      <div class="scholarship-actions mt-4">
+                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/teljesitmenyalapu-osztondijak/"
+                           target="_blank"
+                           class="btn btn-primary">
+                          <i class="ri-external-link-line"></i> Részletek a szabályzatban
+                        </a>
+                        <button id="corvinus-chart-nav-btn" class="btn btn-outline-primary">
+                          <i class="ri-bar-chart-box-line"></i> Corvinus ösztöndíj statisztikák
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 text-center d-none d-lg-block">
+                      <img src="assets/img-optimized/features-1.png" alt="Corvinus ösztöndíj" class="img-fluid rounded-3">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: Teljesítményalapú -->
+          <div class="tab-pane" id="tab-2">
+            <div class="row g-4 py-4">
+              <div class="col-12">
+                <!-- Sub-toggle -->
+                <div class="scholarship-sub-toggle-wrapper mb-4">
+                  <input type="radio" name="performance-type" id="performance-tanulmany" value="tanulmany" checked>
+                  <input type="radio" name="performance-type" id="performance-tudomanyos" value="tudomanyos">
+                  <label for="performance-tanulmany" class="scholarship-sub-toggle-label scholarship-sub-toggle-left">
+                    <span>Tanulmányi ösztöndíj</span>
+                  </label>
+                  <label for="performance-tudomanyos" class="scholarship-sub-toggle-label scholarship-sub-toggle-right">
+                    <span>Tudományos ösztöndíj</span>
+                  </label>
+                  <div class="scholarship-sub-toggle-slider"></div>
+                </div>
+
+                <!-- Tanulmányi -->
+                <div id="tanulmany-content" class="scholarship-content-card">
+                  <h3><i class="ri-book-line"></i> Tanulmányi ösztöndíj</h3>
+                  <p class="lead">
+                    A tanulmányi ösztöndíj a kiváló tanulmányi eredményt elérő hallgatók számára biztosított támogatás.
+                  </p>
+
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="scholarship-section">
+                        <h5><i class="ri-checkbox-circle-line"></i> Feltételek:</h5>
+                        <ul class="scholarship-list">
+                          <li>Nappali tagozatos, aktív hallgatói jogviszony</li>
+                          <li>Minimum 23 kredit teljesítése az ösztöndíjátlagba beszámító tárgyakból</li>
+                          <li>Minimum 3.80-es tanulmányi átlag</li>
+                          <li>A képzési időhöz rendelt jogosultsági időszak be nem lépése</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="scholarship-section">
+                        <h5><i class="ri-calculator-line"></i> Hogyan számítódik ki:</h5>
+                        <p>
+                          Az ösztöndíj összege a rangsorolás alapján kerül meghatározásra, amely a tanulmányi átlag és a teljesített kreditek alapján történik.
+                        </p>
+                        <div class="formula-box">
+                          <div class="formula-title">Az átlag számítása:</div>
+                          <div class="formula-content">
+                            <div class="fraction">
+                              <div class="numerator">
+                                <div class="numerator-content">
+                                  <div class="term-group">
+                                    <span class="term-group-label">Kötelező</span>
+                                    <span class="term">(1,2 × kredit × jegy)</span>
+                                  </div>
+                                  <span class="operator">+</span>
+                                  <div class="term-group">
+                                    <span class="term-group-label">Választható</span>
+                                    <span class="term">(kredit × jegy)</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="denominator">
+                                <span class="term">összes felvett kredit</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="scholarship-actions mt-4">
+                    <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/teljesitmenyalapu-osztondijak/#accordion-item-1486"
+                       target="_blank"
+                       class="btn btn-primary">
+                      <i class="ri-external-link-line"></i> Részletek a szabályzatban
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Tudományos -->
+                <div id="tudomanyos-content" class="scholarship-content-card d-none">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                      <h3><i class="ri-flask-line"></i> Tudományos ösztöndíj</h3>
+                      <p class="lead">
+                        A tudományos ösztöndíj a kutatási és tudományos tevékenységben kiemelkedő hallgatók támogatására szolgál.
+                      </p>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-checkbox-circle-line"></i> Feltételek:</h5>
+                        <ul class="scholarship-list">
+                          <li>Aktív hallgatói jogviszony</li>
+                          <li>Tudományos tevékenység igazolása (TDK dolgozat, publikáció, kutatási projekt)</li>
+                          <li>Témavezető támogató véleménye</li>
+                          <li>Minimum kötelezettségvállalás a kutatási munka folytatására</li>
+                        </ul>
+                      </div>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-calendar-line"></i> Pályázás:</h5>
+                        <p>
+                          A tudományos ösztöndíjra félévente lehet pályázni. A pályázathoz szükséges a kutatási terv,
+                          témavezető ajánlása és az eddigi tudományos eredmények bemutatása.
+                        </p>
+                      </div>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-information-line"></i> Tudnivalók:</h5>
+                        <p>
+                          Az ösztöndíj célja a hallgatói kutatási tevékenység támogatása és ösztönzése.
+                          Különösen előnyt jelent a TDK-n való részvétel, publikációk megjelentetése és kutatási projektekben való aktív részvétel.
+                        </p>
+                      </div>
+
+                      <div class="scholarship-actions mt-4">
+                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/teljesitmenyalapu-osztondijak/"
+                           target="_blank"
+                           class="btn btn-primary">
+                          <i class="ri-external-link-line"></i> Részletek a szabályzatban
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                          <i class="ri-file-edit-line"></i> Pályázati űrlap
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 text-center d-none d-lg-block">
+                      <img src="assets/img-optimized/features-4.png" alt="Tudományos ösztöndíj" class="img-fluid rounded-3" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: Szociális -->
+          <div class="tab-pane" id="tab-3">
+            <div class="row g-4 py-4">
+              <div class="col-12">
+                <!-- Sub-toggle -->
+                <div class="scholarship-sub-toggle-wrapper mb-4">
+                  <input type="radio" name="social-type" id="social-rendszeres" value="rendszeres" checked>
+                  <input type="radio" name="social-type" id="social-rendkivuli" value="rendkivuli">
+                  <label for="social-rendszeres" class="scholarship-sub-toggle-label scholarship-sub-toggle-left">
+                    <span>Rendszeres szociális</span>
+                  </label>
+                  <label for="social-rendkivuli" class="scholarship-sub-toggle-label scholarship-sub-toggle-right">
+                    <span>Rendkívüli szociális</span>
+                  </label>
+                  <div class="scholarship-sub-toggle-slider"></div>
+                </div>
+
+                <!-- Rendszeres -->
+                <div id="rendszeres-content" class="scholarship-content-card">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                      <h3><i class="ri-hand-heart-line"></i> Rendszeres szociális ösztöndíj</h3>
+                      <p class="lead">
+                        A rendszeres szociális ösztöndíj a nehéz szociális helyzetben lévő hallgatók támogatására szolgál.
+                      </p>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-checkbox-circle-line"></i> Feltételek:</h5>
+                        <ul class="scholarship-list">
+                          <li>Aktív hallgatói jogviszony</li>
+                          <li>Szociális rászorultság igazolása</li>
+                          <li>Jövedelmi és vagyoni nyilatkozat benyújtása</li>
+                          <li>A képzési időhöz rendelt jogosultsági időszak be nem lépése</li>
+                        </ul>
+                      </div>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-calendar-line"></i> Pályázás:</h5>
+                        <p>
+                          A rendszeres szociális ösztöndíjra félévente lehet pályázni, a meghatározott határidőkig.
+                          A pályázathoz szükséges dokumentumokat a hallgatói portálon keresztül kell benyújtani.
+                        </p>
+                      </div>
+
+                      <div class="scholarship-actions mt-4">
+                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/szocialis-alapu-osztondijak/"
+                           target="_blank"
+                           class="btn btn-primary">
+                          <i class="ri-external-link-line"></i> Részletek a szabályzatban
+                        </a>
+                        <a href="#"
+                           target="_blank"
+                           class="btn btn-outline-primary">
+                          <i class="ri-book-open-line"></i> Szoc kisokos
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 text-center d-none d-lg-block">
+                      <img src="assets/img-optimized/features-2.png" alt="Rendszeres szociális" class="img-fluid rounded-3">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Rendkívüli -->
+                <div id="rendkivuli-content" class="scholarship-content-card d-none">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                      <h3><i class="ri-alert-line"></i> Rendkívüli szociális ösztöndíj</h3>
+                      <p class="lead">
+                        A rendkívüli szociális ösztöndíj váratlan, rendkívüli élethelyzetben nyújt segítséget.
+                      </p>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-checkbox-circle-line"></i> Feltételek:</h5>
+                        <ul class="scholarship-list">
+                          <li>Váratlan, rendkívüli élethelyzet (pl. családtag halála, súlyos betegség, elemi kár)</li>
+                          <li>Aktív hallgatói jogviszony</li>
+                          <li>A rendkívüli esemény igazolása dokumentumokkal</li>
+                          <li>Indoklás a pályázatban</li>
+                        </ul>
+                      </div>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-calendar-line"></i> Pályázás:</h5>
+                        <p>
+                          A rendkívüli szociális ösztöndíjra az esemény bekövetkezése után bármikor lehet pályázni.
+                          A pályázat elbírálása egyedi mérlegelés alapján történik.
+                        </p>
+                      </div>
+
+                      <div class="scholarship-actions mt-4">
+                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/szocialis-alapu-osztondijak/"
+                           target="_blank"
+                           class="btn btn-primary">
+                          <i class="ri-external-link-line"></i> Részletek a szabályzatban
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 text-center d-none d-lg-block">
+                      <img src="assets/img-optimized/features-2.png" alt="Rendkívüli szociális" class="img-fluid rounded-3">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: Közéleti -->
+          <div class="tab-pane" id="tab-4">
+            <div class="row g-4 py-4">
+              <div class="col-12">
+                <div class="scholarship-content-card">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                      <h3><i class="ri-community-line"></i> Közéleti ösztöndíj</h3>
+                      <p class="lead">
+                        A közéleti ösztöndíj az egyetemi közéletben aktívan részt vevő hallgatók elismerésére és támogatására szolgál.
+                      </p>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-checkbox-circle-line"></i> Feltételek:</h5>
+                        <ul class="scholarship-list">
+                          <li>Aktív hallgatói jogviszony</li>
+                          <li>Rendszeres, aktív részvétel az egyetemi közéletben (HÖK, szakkollégiumi munka, egyetemi szervezetek, stb.)</li>
+                          <li>Minimum havi időráfordítás igazolása</li>
+                          <li>Közéleti tevékenység dokumentálása</li>
+                        </ul>
+                      </div>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-file-list-line"></i> Pályázati folyamat:</h5>
+                        <p>
+                          A közéleti ösztöndíjra félévente lehet pályázni. A pályázatban részletezni kell a közéleti tevékenységet,
+                          az elvégzett munkát és az időráfordítást. A pályázatokat bizottság értékeli.
+                        </p>
+                      </div>
+
+                      <div class="scholarship-section">
+                        <h5><i class="ri-information-line"></i> Tudnivalók:</h5>
+                        <p>
+                          A közéleti ösztöndíj célja az egyetemi közösség építésében való aktív részvétel elismerése.
+                          Az ösztöndíj összege a végzett munka mennyiségétől és minőségétől függően változhat.
+                        </p>
+                      </div>
+
+                      <div class="scholarship-actions mt-4">
+                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/"
+                           target="_blank"
+                           class="btn btn-primary">
+                          <i class="ri-external-link-line"></i> Részletek a szabályzatban
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                          <i class="ri-file-edit-line"></i> Pályázati űrlap
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 text-center d-none d-lg-block">
+                      <img src="assets/img-optimized/features-3.png" alt="Közéleti ösztöndíj" class="img-fluid rounded-3">
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-1.png" alt="" class="img-fluid">
-              </div>
             </div>
           </div>
-          <div class="tab-pane" id="tab-2">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Neque exercitationem debitis soluta quos debitis quo mollitia officia est</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                  sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
-                  </li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a.
-                    Ipsum neque dolor voluptate nisi sed.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
-                    pariatur.</li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-2.png" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-
-          <!-- TAB 3: Ösztöndíj kalkulátor (csak itt jelenik meg) -->
-          <div class="tab-pane" id="tab-3">
-            <div class="row g-4 align-items-center py-4">
-              <!-- BAL: Kalkulátor -->
-              <div class="col-lg-6">
-                <h3 class="mb-3">Ösztöndíj-kalkulátor</h3>
-                <p class="text-muted mb-4">
-                  Add meg a tárgyakat, a kreditértéket és az érdemjegyet.  <br> Az átlag számítása:
-                  <code>Σ(kredit × jegy) / 30</code>.
-                </p>
-
-                <div id="oszto-alert" class="alert alert-danger d-none" role="alert">
-                  Nincs minden mező kitöltve vagy érvényes tartományban.
-                </div>
-
-                <div id="oszto-subjects" class="vstack gap-3"></div>
-
-                <div class="d-flex gap-2 mt-3">
-                  <button id="oszto-add" type="button" class="btn btn-outline-primary">
-                    + Tárgy hozzáadása
-                  </button>
-                  <button id="oszto-calc" type="button" class="btn btn-primary ms-auto">
-                    Számolás
-                  </button>
-                </div>
-
-                <div class="mt-4">
-                  <h5 class="mb-1">Ösztöndíj átlag:</h5>
-                  <div id="oszto-result" class="fs-4 fw-bold">–</div>
-                </div>
-              </div>
-
-              <!-- JOBB: Kép -->
-              <div class="col-lg-6 text-center">
-                <img src="assets/img/features-3.png" alt="Ösztöndíj" class="img-fluid rounded-3 shadow-sm">
-              </div>
-            </div>
-          </div>
-          <!-- /TAB 3 -->
 
           <style>
             .subject-row {
-              border: 1px solid rgba(0, 0, 0, .08);
-              border-radius: .75rem;
-              padding: .75rem;
+              border: 1px solid #e0e0e0;
+              border-radius: 12px;
+              padding: 16px;
               background: #fff;
+              transition: all 0.2s ease;
+            }
+
+            .subject-row:hover {
+              border-color: #BF8F55;
+              box-shadow: 0 2px 8px rgba(191, 143, 85, 0.1);
             }
 
             .subject-row .form-label {
               font-weight: 600;
+              font-size: 13px;
+              color: #013649;
+              margin-bottom: 6px;
+            }
+
+            .subject-row .form-control,
+            .subject-row .form-select {
+              border-radius: 8px;
+              border: 1px solid #e0e0e0;
+              padding: 10px 12px;
+              font-size: 14px;
+              transition: all 0.2s ease;
+            }
+
+            .subject-row .form-control:focus,
+            .subject-row .form-select:focus {
+              border-color: #BF8F55;
+              box-shadow: 0 0 0 3px rgba(191, 143, 85, 0.15);
             }
 
             .subject-row .remove-btn {
               visibility: hidden;
+              opacity: 0;
+              transition: all 0.2s ease;
+              border-radius: 50%;
+              width: 32px;
+              height: 32px;
+              padding: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
 
             .subject-row:hover .remove-btn {
               visibility: visible;
+              opacity: 1;
+            }
+
+            /* Mobilon mindig látható a törlés gomb */
+            @media (max-width: 768px) {
+              .subject-row .remove-btn {
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+
+            /* Kis képernyőn a form mezők egymás alatt */
+            @media (max-width: 576px) {
+              .subject-row .col-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 8px;
+              }
+              .subject-row .col-12.col-md-1 {
+                margin-top: 8px;
+                text-align: center !important;
+              }
+              .subject-row .remove-btn {
+                width: 100%;
+                border-radius: 8px;
+              }
+            }
+
+            .calculator-formula-box {
+              background: linear-gradient(135deg, #faf8f7 0%, #f5f0eb 100%);
+              border: 1px solid #e0e0e0;
+              border-radius: 12px;
+              padding: 20px;
+            }
+
+            .calculator-formula-box strong {
+              color: #013649;
+            }
+
+            .calculator-result-box {
+              background: linear-gradient(135deg, #013649 0%, #025d7a 100%);
+              border-radius: 12px;
+              padding: 20px 24px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            .calculator-result-box .result-label {
+              color: rgba(255, 255, 255, 0.85);
+              font-size: 16px;
+              font-weight: 500;
+            }
+
+            .calculator-result-box .result-value {
+              color: #fff;
+              font-size: 28px;
+              font-weight: 700;
+            }
+
+            #oszto-add {
+              border-radius: 8px;
+              padding: 10px 20px;
+              font-weight: 600;
+              border-color: #BF8F55;
+              color: #BF8F55;
+            }
+
+            #oszto-add:hover {
+              background: #BF8F55;
+              border-color: #BF8F55;
+              color: #fff;
+            }
+
+            #oszto-calc {
+              border-radius: 8px;
+              padding: 10px 24px;
+              font-weight: 600;
+              background: #013649;
+              border-color: #013649;
+            }
+
+            #oszto-calc:hover {
+              background: #025d7a;
+              border-color: #025d7a;
+            }
+
+            @media (max-width: 767px) {
+              .calculator-result-box {
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+              }
+              .calculator-result-box .result-value {
+                font-size: 32px;
+              }
+            }
+
+            .corvinus-toggle-wrapper {
+              position: relative;
+              width: 100%;
+              max-width: 400px;
+              margin: 0 auto;
+              display: flex;
+              align-items: stretch;
+              border: 1px solid #e0e0e0;
+              border-radius: 6px;
+              overflow: hidden;
+              background: #ffffff;
+            }
+
+            .corvinus-toggle-wrapper input[type="radio"] {
+              display: none;
+            }
+
+            .corvinus-toggle-label {
+              flex: 1;
+              text-align: center;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              font-weight: 600;
+              font-size: 14px;
+              padding: 14px 16px;
+              color: #013649;
+              user-select: none;
+              background: #ffffff;
+              border-right: 1px solid #e0e0e0;
+              font-family: "Argentum Sans Regular", sans-serif;
+            }
+
+            .corvinus-toggle-label:last-of-type {
+              border-right: none;
+            }
+
+            .corvinus-toggle-label span {
+              display: inline-block;
+            }
+
+            .corvinus-toggle-label:hover {
+              background: #faf8f7;
+            }
+
+            .corvinus-toggle-slider {
+              display: none;
+            }
+
+            #corvinus-level-alap:checked ~ .corvinus-toggle-left {
+              background: #013649;
+              color: #ffffff;
+            }
+
+            #corvinus-level-mester:checked ~ .corvinus-toggle-right {
+              background: #013649;
+              color: #ffffff;
+            }
+
+            .corvinus-toggle-label:active {
+              transform: scale(0.98);
+            }
+
+            .corvinus-chart-card {
+              border: 1px solid #e0e0e0;
+              border-radius: 12px;
+              overflow: hidden;
+              background: #ffffff;
+            }
+
+            #corvinus-chart {
+              height: 320px !important;
+              width: 100% !important;
+            }
+
+            .corvinus-source-info {
+              margin: 20px 0 0 0;
+              padding: 12px 16px;
+              font-size: 12px;
+              color: #666;
+              text-align: center;
+              background: #f5f5f5;
+              border-radius: 8px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+              .corvinus-chart-card .card-body {
+                padding: 1.25rem !important;
+              }
+
+              #tab-4 h3,
+              #tab-5 h3 {
+                font-size: 1.4rem;
+              }
+
+              #corvinus-chart {
+                height: 280px !important;
+              }
+            }
+
+            /* Mobile responsiveness */
+            @media (max-width: 767px) {
+              .corvinus-chart-card .card-body {
+                padding: 1rem !important;
+              }
+
+              #tab-4 h3,
+              #tab-5 h3 {
+                font-size: 1.3rem;
+                text-align: center;
+              }
+
+              #tab-4 .text-muted,
+              #tab-5 .text-muted {
+                font-size: 0.9rem;
+                text-align: center;
+              }
+
+              #corvinus-chart {
+                height: 240px !important;
+              }
+
+              .corvinus-source-info {
+                font-size: 10px;
+              }
+            }
+
+            /* Form select */
+            #corvinus-course-select {
+              border-radius: 6px;
+              border: 1px solid #e0e0e0;
+              padding: 12px 16px;
+              font-size: 14px;
+              transition: all 0.2s ease;
+            }
+
+            #corvinus-course-select:focus {
+              border-color: #013649;
+              box-shadow: none;
+              outline: none;
+            }
+
+            /* Alert info */
+            #corvinus-info {
+              border-radius: 6px;
+              border-left: 3px solid #013649;
+              background: #faf8f7;
+            }
+
+            .corvinus-chart-empty {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              min-height: 300px;
+              padding: 40px 20px;
+              text-align: center;
+            }
+
+            .corvinus-chart-empty.d-none + #corvinus-chart {
+              display: block !important;
+            }
+
+            .corvinus-chart-empty .empty-icon {
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              background: linear-gradient(135deg, #faf8f7 0%, #f0ece8 100%);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 24px;
+              border: 2px dashed #d0d0d0;
+            }
+
+            .corvinus-chart-empty .empty-icon i {
+              font-size: 36px;
+              color: #BF8F55;
+              opacity: 0.7;
+            }
+
+            .corvinus-chart-empty .empty-title {
+              color: #013649;
+              margin-bottom: 8px;
+              font-size: 18px;
+              font-weight: 600;
+            }
+
+            .corvinus-chart-empty .empty-text {
+              color: #888;
+              font-size: 14px;
+              max-width: 280px;
+              line-height: 1.5;
+              margin: 0;
+            }
+
+            @media (max-width: 767px) {
+              .corvinus-chart-empty {
+                min-height: 250px;
+                padding: 30px 15px;
+              }
+              .corvinus-chart-empty .empty-icon {
+                width: 64px;
+                height: 64px;
+              }
+              .corvinus-chart-empty .empty-icon i {
+                font-size: 28px;
+              }
+              .corvinus-chart-empty .empty-title {
+                font-size: 16px;
+              }
+            }
+
+            .scholarship-sub-toggle-wrapper {
+              position: relative;
+              width: 100%;
+              max-width: 400px;
+              margin: 0 auto;
+              display: flex;
+              align-items: stretch;
+              border: 1px solid #e0e0e0;
+              border-radius: 6px;
+              overflow: hidden;
+              background: #ffffff;
+            }
+
+            .scholarship-sub-toggle-wrapper input[type="radio"] {
+              display: none;
+            }
+
+            .scholarship-sub-toggle-label {
+              flex: 1;
+              text-align: center;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              font-weight: 600;
+              font-size: 13px;
+              padding: 12px 16px;
+              color: #013649;
+              user-select: none;
+              background: #ffffff;
+              border-right: 1px solid #e0e0e0;
+              font-family: "Argentum Sans Regular", sans-serif;
+            }
+
+            .scholarship-sub-toggle-label:last-of-type {
+              border-right: none;
+            }
+
+            .scholarship-sub-toggle-label span {
+              display: inline-block;
+            }
+
+            .scholarship-sub-toggle-label:hover {
+              background: #faf8f7;
+            }
+
+            .scholarship-sub-toggle-slider {
+              display: none;
+            }
+
+            #performance-tanulmany:checked ~ .scholarship-sub-toggle-left,
+            #tools-calculator:checked ~ .scholarship-sub-toggle-left,
+            #social-rendszeres:checked ~ .scholarship-sub-toggle-left {
+              background: #013649;
+              color: #ffffff;
+            }
+
+            #performance-tudomanyos:checked ~ .scholarship-sub-toggle-right,
+            #tools-stats:checked ~ .scholarship-sub-toggle-right,
+            #social-rendkivuli:checked ~ .scholarship-sub-toggle-right {
+              background: #013649;
+              color: #ffffff;
+            }
+
+            .scholarship-content-card,
+            .tool-content-card {
+              background: transparent;
+              padding: 1.5rem 0;
+            }
+
+            .scholarship-section {
+              margin: 1.5rem 0;
+            }
+
+            .scholarship-section h5 {
+              color: #013649;
+              font-weight: 600;
+              margin-bottom: 1rem;
+            }
+
+            .scholarship-list {
+              list-style: none;
+              padding-left: 0;
+            }
+
+            .scholarship-list li {
+              padding: 0.5rem 0;
+              padding-left: 1.5rem;
+              position: relative;
+            }
+
+            .scholarship-list li:before {
+              content: "✓";
+              position: absolute;
+              left: 0;
+              color: #013649;
+              font-weight: bold;
+            }
+
+            .scholarship-actions .btn {
+              margin-right: 0.5rem;
+              margin-bottom: 0.5rem;
+            }
+
+            /* Tablet responsiveness */
+            @media (min-width: 768px) and (max-width: 991px) {
+              .scholarship-sub-toggle-wrapper,
+              .corvinus-toggle-wrapper {
+                max-width: 350px;
+              }
+
+              .scholarship-sub-toggle-label,
+              .corvinus-toggle-label {
+                font-size: 13px;
+                padding: 12px 14px;
+              }
+
+              .scholarship-content-card,
+              .tool-content-card {
+                padding: 1.75rem;
+              }
+            }
+
+            /* Mobile responsiveness */
+            @media (min-width: 575px) and (max-width: 767px) {
+              .scholarship-sub-toggle-wrapper,
+              .corvinus-toggle-wrapper {
+                max-width: 100%;
+              }
+
+              .scholarship-sub-toggle-label,
+              .corvinus-toggle-label {
+                font-size: 13px;
+                padding: 12px 16px;
+              }
+
+              .scholarship-content-card,
+              .tool-content-card {
+                padding: 1.5rem;
+              }
+
+              .scholarship-actions .btn {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 8px;
+              }
+            }
+
+            /* Small mobile */
+            @media (max-width: 574px) {
+              .scholarship-sub-toggle-wrapper,
+              .corvinus-toggle-wrapper {
+                max-width: 100%;
+                margin-bottom: 16px;
+              }
+
+              .scholarship-sub-toggle-label,
+              .corvinus-toggle-label {
+                font-size: 12px;
+                padding: 14px 12px;
+                font-weight: 600;
+              }
+
+              .scholarship-content-card,
+              .tool-content-card {
+                padding: 1.25rem;
+                border-radius: 8px;
+              }
+
+              .scholarship-section {
+                margin: 1rem 0;
+              }
+
+              .scholarship-section h5 {
+                font-size: 1rem;
+              }
+
+              .scholarship-actions .btn {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 8px;
+                padding: 12px 16px;
+              }
+            }
+
+            @media (max-width: 374px) {
+              .scholarship-sub-toggle-label,
+              .corvinus-toggle-label {
+                font-size: 11px;
+                padding: 12px 8px;
+              }
+
+              .scholarship-content-card,
+              .tool-content-card {
+                padding: 1rem;
+              }
             }
           </style>
 
           <script>
+            // Ösztöndíj kalkulátor
             (function () {
-              const pane = document.getElementById('tab-3');
               let initialized = false;
 
               function createSubjectRow(subjectsEl, values = {}) {
@@ -363,15 +1484,22 @@
                 row.className = 'subject-row';
                 row.innerHTML = `
         <div class="row g-3 align-items-end">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-4">
             <label class="form-label">Tárgy neve</label>
             <input type="text" class="form-control subject-name" placeholder="pl. Statisztika II" value="${values.name ?? ''}">
           </div>
-          <div class="col-6 col-md-3">
+          <div class="col-4 col-md-2">
+            <label class="form-label">Típus</label>
+            <select class="form-select subject-type">
+              <option value="kotelezo" ${values.type === 'kotelezo' ? 'selected' : ''}>Kötelező</option>
+              <option value="valaszthato" ${values.type === 'valaszthato' ? 'selected' : ''}>Választható</option>
+            </select>
+          </div>
+          <div class="col-4 col-md-2">
             <label class="form-label">Kredit</label>
             <input type="number" class="form-control subject-credit" min="1" step="1" placeholder="pl. 4" value="${values.credit ?? ''}">
           </div>
-          <div class="col-6 col-md-2">
+          <div class="col-4 col-md-2">
             <label class="form-label">Jegy (1–5)</label>
             <input type="number" class="form-control subject-grade" min="1" max="5" step="1" placeholder="pl. 5" value="${values.grade ?? ''}">
           </div>
@@ -383,7 +1511,6 @@
                 row.querySelector('.remove-btn').addEventListener('click', () => {
                   row.remove();
                   if (!subjectsEl.querySelector('.subject-row')) {
-                    // ha minden sort töröltünk, visszateszünk egy üreset
                     createSubjectRow(subjectsEl, { name: '', credit: '', grade: '' });
                   }
                 });
@@ -394,11 +1521,22 @@
                 if (initialized) return;
                 initialized = true;
 
-                const subjectsEl = pane.querySelector('#oszto-subjects');
-                const addBtn = pane.querySelector('#oszto-add');
-                const calcBtn = pane.querySelector('#oszto-calc');
-                const alertEl = pane.querySelector('#oszto-alert');
-                const resultEl = pane.querySelector('#oszto-result');
+                const calculatorPane = document.getElementById('calculator-content');
+                if (!calculatorPane) {
+                  console.error('Calculator pane not found');
+                  return;
+                }
+
+                const subjectsEl = calculatorPane.querySelector('#oszto-subjects');
+                const addBtn = calculatorPane.querySelector('#oszto-add');
+                const calcBtn = calculatorPane.querySelector('#oszto-calc');
+                const alertEl = calculatorPane.querySelector('#oszto-alert');
+                const resultEl = calculatorPane.querySelector('#oszto-result');
+
+                if (!subjectsEl || !addBtn || !calcBtn || !alertEl || !resultEl) {
+                  console.error('Calculator elements not found');
+                  return;
+                }
 
                 // ALAPSOR (üres minta)
                 createSubjectRow(subjectsEl);
@@ -417,92 +1555,436 @@
                     return;
                   }
 
-                  let sum = 0;
+                  let weightedSum = 0;
+                  let totalCredits = 0;
+
                   for (const row of rows) {
+                    const type = row.querySelector('.subject-type').value;
                     const credit = Number(row.querySelector('.subject-credit').value);
                     const grade = Number(row.querySelector('.subject-grade').value);
 
-                    const validCredit = Number.isFinite(credit) && credit > 0; // nincs felső korlát
-                    const validGrade = Number.isFinite(grade) && grade >= 1 && grade <= 5;
+                    const validCredit = Number.isFinite(credit) && credit > 0;
+                    const validGrade = Number.isInteger(grade) && grade >= 1 && grade <= 5;
 
                     if (!validCredit || !validGrade) {
-                      alertEl.textContent = 'Nincs minden mező kitöltve vagy érvényes tartományban.';
+                      alertEl.textContent = 'Kérlek ellenőrizd a mezőket! A jegy csak egész szám lehet (1-5).';
                       alertEl.classList.remove('d-none');
                       resultEl.textContent = '–';
                       return;
                     }
-                    sum += credit * grade;
+
+                    // Képlet: Kötelező tárgyak súlyozva 1.2-vel
+                    if (type === 'kotelezo') {
+                      weightedSum += 1.2 * credit * grade;
+                    } else {
+                      weightedSum += credit * grade;
+                    }
+
+                    totalCredits += credit;
                   }
 
-                  const avg = sum / 30;
+                  if (totalCredits === 0) {
+                    alertEl.textContent = 'Az összes kredit nem lehet nulla.';
+                    alertEl.classList.remove('d-none');
+                    resultEl.textContent = '–';
+                    return;
+                  }
+
+                  const avg = weightedSum / totalCredits;
                   resultEl.textContent = avg.toFixed(2).replace('.', ',');
                 });
               }
 
-              // Bootstrap tab esemény – amikor a 3. fülre váltanak, inicializálunk
-              document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
-                tab.addEventListener('shown.bs.tab', (e) => {
-                  if (e.target.getAttribute('href') === '#tab-3') {
-                    initCalculatorOnce();
-                  }
+              document.addEventListener('DOMContentLoaded', () => {
+                const toolsRadios = document.querySelectorAll('input[name="tools-type"]');
+                toolsRadios.forEach(radio => {
+                  radio.addEventListener('change', function() {
+                    if (this.value === 'calculator' && !initialized) {
+                      setTimeout(() => {
+                        initCalculatorOnce();
+                      }, 50);
+                    }
+                  });
                 });
+
+                const calcRadio = document.getElementById('tools-calculator');
+                if (calcRadio && calcRadio.checked) {
+                  setTimeout(() => {
+                    initCalculatorOnce();
+                  }, 100);
+                }
               });
 
-              // Ha oldalbetöltéskor már a #tab-3 aktív, akkor is inicializáljuk
-              if (pane.classList.contains('active') || pane.classList.contains('show')) {
-                initCalculatorOnce();
-              }
+              window.initCalculatorIfNeeded = function() {
+                const calcRadio = document.getElementById('tools-calculator');
+                if (calcRadio && calcRadio.checked && !initialized) {
+                  initCalculatorOnce();
+                }
+              };
             })();
           </script>
 
+          <script>
 
-          <!-- Ösztöndíj kalkulátor vége -->
+            document.addEventListener('DOMContentLoaded', function() {
+              const performanceRadios = document.querySelectorAll('input[name="performance-type"]');
+              const tanulmanyContent = document.getElementById('tanulmany-content');
+              const tudomanyosContent = document.getElementById('tudomanyos-content');
 
-          <div class="tab-pane" id="tab-4">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Omnis fugiat ea explicabo sunt dolorum asperiores sequi inventore rerum</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                  sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.
-                  </li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
-                    pariatur.</li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-4.png" alt="" class="img-fluid">
+              if (performanceRadios.length > 0) {
+                performanceRadios.forEach(radio => {
+                  radio.addEventListener('change', function() {
+                    if (this.value === 'tanulmany') {
+                      tanulmanyContent.classList.remove('d-none');
+                      tudomanyosContent.classList.add('d-none');
+                    } else if (this.value === 'tudomanyos') {
+                      tanulmanyContent.classList.add('d-none');
+                      tudomanyosContent.classList.remove('d-none');
+                    }
+                  });
+                });
+              }
+
+              const socialRadios = document.querySelectorAll('input[name="social-type"]');
+              const rendszeresContent = document.getElementById('rendszeres-content');
+              const rendkivuliContent = document.getElementById('rendkivuli-content');
+
+              if (socialRadios.length > 0) {
+                socialRadios.forEach(radio => {
+                  radio.addEventListener('change', function() {
+                    rendszeresContent.classList.add('d-none');
+                    rendkivuliContent.classList.add('d-none');
+                    if (this.value === 'rendszeres') {
+                      rendszeresContent.classList.remove('d-none');
+                    } else if (this.value === 'rendkivuli') {
+                      rendkivuliContent.classList.remove('d-none');
+                    }
+                  });
+                });
+              }
+
+              const toolsRadios = document.querySelectorAll('input[name="tools-type"]');
+              const calculatorContent = document.getElementById('calculator-content');
+              const statsContent = document.getElementById('stats-content');
+
+              if (toolsRadios.length > 0 && calculatorContent && statsContent) {
+                toolsRadios.forEach(radio => {
+                  radio.addEventListener('change', function() {
+                    if (this.value === 'calculator') {
+                      calculatorContent.classList.remove('d-none');
+                      statsContent.classList.add('d-none');
+                    } else if (this.value === 'stats') {
+                      calculatorContent.classList.add('d-none');
+                      statsContent.classList.remove('d-none');
+                    }
+                  });
+                });
+              }
+            });
+
+            function navigateToCorvinusChart() {
+              const tabLinks = document.querySelectorAll('.scholarship-tabs-premium .nav-link');
+              tabLinks.forEach(link => link.classList.remove('active', 'show'));
+
+              const tab5Link = document.querySelector('a[href="#tab-5"]');
+              if (tab5Link) {
+                tab5Link.classList.add('active', 'show');
+              }
+
+              if (window.syncScholarshipDropdownActive) {
+                window.syncScholarshipDropdownActive('tab-5');
+              }
+              const allPanes = document.querySelectorAll('.tab-content .tab-pane');
+              allPanes.forEach(pane => pane.classList.remove('active', 'show'));
+              const tab5Pane = document.getElementById('tab-5');
+              if (tab5Pane) {
+                tab5Pane.classList.add('active', 'show');
+              }
+
+              requestAnimationFrame(() => {
+                const statsRadio = document.getElementById('tools-stats');
+                if (statsRadio) {
+                  statsRadio.checked = true;
+                  statsRadio.dispatchEvent(new Event('change'));
+
+                  requestAnimationFrame(() => {
+                    if (window.initCorvinusChart) {
+                      window.initCorvinusChart();
+                    }
+
+                    setTimeout(() => {
+                      const corvinusSection = document.getElementById('corvinus-chart-section');
+                      if (corvinusSection) {
+                        corvinusSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setTimeout(() => {
+                          window.scrollBy({ top: -40, behavior: 'smooth' });
+                        }, 400);
+                      }
+                    }, 100);
+                  });
+                }
+              });
+            }
+
+            window.handleScholarshipClick = function(event, clickedElement) {
+              event.preventDefault();
+              event.stopPropagation();
+
+              var allLinks = document.querySelectorAll('.scholarship-nav-link');
+              for (var i = 0; i < allLinks.length; i++) {
+                allLinks[i].classList.remove('active');
+              }
+              clickedElement.classList.add('active');
+
+              // 3. Mobil menü bezárása
+              var navbar = document.getElementById('navbar');
+              if (navbar && navbar.classList.contains('navbar-mobile')) {
+                navbar.classList.remove('navbar-mobile');
+                var activeDropdowns = navbar.querySelectorAll('.dropdown-active');
+                for (var i = 0; i < activeDropdowns.length; i++) {
+                  activeDropdowns[i].classList.remove('dropdown-active');
+                }
+                var navbarToggle = document.querySelector('.mobile-nav-toggle');
+                if (navbarToggle) {
+                  navbarToggle.classList.remove('bi-x');
+                  navbarToggle.classList.add('bi-list');
+                }
+              }
+
+              var tabId = clickedElement.getAttribute('data-tab');
+              if (tabId && typeof navigateToScholarshipTab === 'function') {
+                navigateToScholarshipTab(tabId);
+              }
+            };
+
+            window.syncScholarshipDropdownActive = function(activeTabId) {
+              var allLinks = document.querySelectorAll('.scholarship-nav-link');
+              for (var i = 0; i < allLinks.length; i++) {
+                allLinks[i].classList.remove('active');
+              }
+              for (var i = 0; i < allLinks.length; i++) {
+                if (allLinks[i].getAttribute('data-tab') === activeTabId) {
+                  allLinks[i].classList.add('active');
+                }
+              }
+            };
+
+            function navigateToScholarshipTab(tabId) {
+              const scholarshipSection = document.getElementById('osztondij');
+              if (scholarshipSection) {
+                scholarshipSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+
+              requestAnimationFrame(() => {
+                const allTabLinks = document.querySelectorAll('.scholarship-tabs-premium .nav-link');
+                allTabLinks.forEach(link => link.classList.remove('active', 'show'));
+
+                const targetTabLink = document.querySelector('.scholarship-tabs-premium a[href="#' + tabId + '"]');
+                if (targetTabLink) {
+                  targetTabLink.classList.add('active', 'show');
+                }
+
+                const allPanes = document.querySelectorAll('.tab-content .tab-pane');
+                allPanes.forEach(pane => pane.classList.remove('active', 'show'));
+
+                const targetPane = document.getElementById(tabId);
+                if (targetPane) {
+                  targetPane.classList.add('active', 'show');
+                }
+
+                if (tabId === 'tab-5' && window.initCalculatorIfNeeded) {
+                  setTimeout(function() {
+                    window.initCalculatorIfNeeded();
+                  }, 50);
+                }
+              });
+            }
+
+            // Csak a Corvinus chart gomb kezelése itt
+            document.addEventListener('DOMContentLoaded', function() {
+              var corvinusChartNavBtn = document.getElementById('corvinus-chart-nav-btn');
+              if (corvinusChartNavBtn) {
+                corvinusChartNavBtn.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  // Mobil menü bezárása
+                  var navbar = document.getElementById('navbar');
+                  if (navbar && navbar.classList.contains('navbar-mobile')) {
+                    navbar.classList.remove('navbar-mobile');
+                    var activeDropdowns = navbar.querySelectorAll('.dropdown-active');
+                    for (var i = 0; i < activeDropdowns.length; i++) {
+                      activeDropdowns[i].classList.remove('dropdown-active');
+                    }
+                    var navbarToggle = document.querySelector('.mobile-nav-toggle');
+                    if (navbarToggle) {
+                      navbarToggle.classList.remove('bi-x');
+                      navbarToggle.classList.add('bi-list');
+                    }
+                  }
+                  navigateToCorvinusChart();
+                });
+              }
+            });
+          </script>
+
+
+          <!-- TAB 5: Kalkulátor -->
+          <div class="tab-pane" id="tab-5">
+            <div class="row g-4 py-4">
+              <div class="col-12">
+                <!-- Sub-toggle -->
+                <div class="scholarship-sub-toggle-wrapper mb-4">
+                  <input type="radio" name="tools-type" id="tools-calculator" value="calculator" checked>
+                  <input type="radio" name="tools-type" id="tools-stats" value="stats">
+                  <label for="tools-calculator" class="scholarship-sub-toggle-label scholarship-sub-toggle-left">
+                    <span>Kalkulátor</span>
+                  </label>
+                  <label for="tools-stats" class="scholarship-sub-toggle-label scholarship-sub-toggle-right">
+                    <span>Statisztikák</span>
+                  </label>
+                  <div class="scholarship-sub-toggle-slider"></div>
+                </div>
+
+                <!-- Kalkulátor -->
+                <div id="calculator-content" class="tool-content-card">
+                  <div class="row g-4 align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                      <h3 class="mb-3"><i class="ri-calculator-line"></i> Tanulmányi átlag kalkulátor</h3>
+                      <p class="text-muted mb-3">
+                        Add meg a tárgyakat, típusukat, a kreditértéket és az érdemjegyet.
+                      </p>
+                      <div class="calculator-formula-box mb-4">
+                        <strong><i class="ri-formula"></i> Az átlag számítása:</strong>
+                        <div class="mt-3" style="font-size: 0.95em;">
+                          <div class="d-flex justify-content-center align-items-center flex-wrap" style="gap: 12px;">
+                            <span style="text-align: center;">
+                              <small class="d-block text-muted mb-1" style="font-size: 0.8em;">KÖTELEZŐ (K)</small>
+                              <span class="fw-bold" style="color: #013649;">(1,2 × kredit × jegy)</span>
+                            </span>
+                            <span class="fw-bold" style="color: #BF8F55; font-size: 1.2em;">+</span>
+                            <span style="text-align: center;">
+                              <small class="d-block text-muted mb-1" style="font-size: 0.8em;">VÁLASZTHATÓ (V)</small>
+                              <span class="fw-bold" style="color: #013649;">(kredit × jegy)</span>
+                            </span>
+                          </div>
+                          <div class="text-center mt-3">
+                            <hr style="border-top: 2px solid #013649; width: 80%; margin: 12px auto;">
+                            <span class="fw-bold" style="color: #013649;">Összes felvett kredit</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="oszto-alert" class="alert alert-danger d-none" role="alert">
+                        Nincs minden mező kitöltve vagy érvényes tartományban.
+                      </div>
+
+                      <div id="oszto-subjects" class="vstack gap-3"></div>
+
+                      <div class="d-flex gap-2 mt-3">
+                        <button id="oszto-add" type="button" class="btn btn-outline-primary">
+                          + Tárgy hozzáadása
+                        </button>
+                        <button id="oszto-calc" type="button" class="btn btn-primary ms-auto">
+                          Számolás
+                        </button>
+                      </div>
+
+                      <div class="calculator-result-box mt-4">
+                        <span class="result-label">Tanulmányi átlag:</span>
+                        <span id="oszto-result" class="result-value">–</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 text-center">
+                      <img src="assets/img-optimized/features-3.png" alt="Ösztöndíj" class="img-fluid rounded-3 shadow-sm">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Statisztikák -->
+                <div id="stats-content" class="tool-content-card d-none">
+
+                  <!-- Corvinus chart -->
+                  <div id="corvinus-chart-section" class="mt-5">
+
+                    <!-- Loading spinner -->
+                    <div id="corvinus-loading" class="text-center py-5 d-none">
+                      <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+                        <span class="visually-hidden">Betöltés...</span>
+                      </div>
+                      <p class="text-muted mt-3">Adatok betöltése...</p>
+                    </div>
+
+                    <!-- Error message -->
+                    <div id="corvinus-error" class="alert alert-danger d-none" role="alert">
+                      <i class="ri-error-warning-line"></i> <strong>Hiba:</strong> <span></span>
+                    </div>
+
+                    <div class="row g-4 align-items-start">
+                      <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                        <h3 class="mb-3"><i class="ri-line-chart-line"></i> Corvinus Ösztöndíj pályázat és felülvizsgálat 2024/2025</h3>
+                        <p class="text-muted mb-4">
+                          Válaszd ki a képzési szintet és a szakot, hogy lásd az ösztöndíjas helyek arányának alakulását 2020-2024 között.
+                        </p>
+
+                        <div class="mb-4">
+                          <label class="form-label fw-bold mb-3 d-block text-center">Képzési szint</label>
+                          <div class="corvinus-toggle-wrapper">
+                            <input type="radio" name="corvinus-level" id="corvinus-level-alap" value="alapképzés" checked>
+                            <input type="radio" name="corvinus-level" id="corvinus-level-mester" value="mesterképzés">
+                            <label for="corvinus-level-alap" class="corvinus-toggle-label corvinus-toggle-left">
+                              <span>Alapképzés</span>
+                            </label>
+                            <label for="corvinus-level-mester" class="corvinus-toggle-label corvinus-toggle-right">
+                              <span>Mesterképzés</span>
+                            </label>
+                            <div class="corvinus-toggle-slider"></div>
+                          </div>
+                        </div>
+
+                        <div class="mb-4">
+                          <label for="corvinus-course-select" class="form-label fw-bold">Szak</label>
+                          <select id="corvinus-course-select" class="form-select form-select-lg">
+                            <option value="">-- Válassz szakot --</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-7 col-md-12">
+                        <div class="card shadow-sm corvinus-chart-card">
+                          <div class="card-body p-3 p-md-4">
+                            <div id="corvinus-chart-empty" class="corvinus-chart-empty">
+                              <div class="empty-icon">
+                                <i class="ri-bar-chart-box-line"></i>
+                              </div>
+                              <h5 class="empty-title">Válassz egy szakot</h5>
+                              <p class="empty-text">Válassz ki egy szakot a legördülő listából, hogy megjelenjen az ösztöndíjas helyek arányának alakulása.</p>
+                            </div>
+                            <canvas id="corvinus-chart" class="d-none"></canvas>
+                            <p id="corvinus-info" class="corvinus-source-info d-none"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
 
       </div>
-    </section><!-- End Osztondij Section -->
+    </section>
 
-    <!-- ======= Cta Section ======= -->
+    <!-- CTA -->
     <section id="cta" class="cta">
       <div class="container">
 
         <div class="row" data-aos="zoom-out">
           <div class="col-lg-9 text-center text-lg-start">
-            <h3>Mikor vagyok jogosult tanulmányi ösztöndíjra?</h3>
-            <p> Ha nappali tagozatos, aktív jogviszonnyal rendelkező hallgató vagy, és még nem lépted túl a képzési idődhöz rendelt jogosultsági időszakot.
-              Alapvető feltétel, hogy az előző aktív félévedben legalább 23 kreditet teljesíts az ösztöndíjátlagba beszámító tárgyakból,
-              tanulmányi átlagodnak pedig el kell érnie a 3,80-at</p>
+            <h3>Corvinus ösztöndíjba beleszámít a bukás?</h3>
+            <p> Szerencsére nem! A Corvinus Ösztöndíjnál a bukott tárgy nem húzza le az átlagodat, mert a számításnál csak a sikeresen teljesített tárgyakat veszik figyelembe.
+              Viszont arra nagyon figyelj, hogy a 46 kreditnek (két félév alatt) a bukások ellenére is össze kell jönnie, különben elveszítheted az ingyenes helyedet!</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
             <a class="cta-btn align-middle" href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/teljesitmenyalapu-osztondijak/#accordion-item-1486" target="_blank">Részletek</a>
@@ -510,9 +1992,9 @@
         </div>
 
       </div>
-    </section><!-- End Cta Section -->
+    </section>
 
-    <!-- ======= Hasznos Section ======= -->
+    <!-- Hasznos -->
     <section id="hasznos" class="services">
       <div class="container">
 
@@ -524,7 +2006,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="icon-box" data-aos="zoom-in-left">
-              <div class="icon"><i class="bi bi-briefcase" style="color: #d6394c;"></i></div>
+              <div class="icon"><i class="bi bi-briefcase" style="color: #BF8F55;"></i></div>
               <h4 class="title scrollto"><a href="#teruletek">Területeink</a></h4>
               <p class="description">Tudj meg mindent a HÖK területeiről, mivel foglalkoznak, kik a vezetőik és
                 elérhetőségeket is találhatsz</p>
@@ -532,7 +2014,7 @@
           </div>
           <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-book" style="color: #f6adad;"></i></div>
+              <div class="icon"><i class="bi bi-book" style="color: #1099b3;"></i></div>
               <h4 class="title"><a href="">Hasznos dokumentumok</a></h4>
               <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo consequat tarad limino ata</p>
@@ -541,7 +2023,7 @@
 
           <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-card-checklist" style="color: #55282e;"></i></div>
+              <div class="icon"><i class="bi bi-card-checklist" style="color: #013649;"></i></div>
               <h4 class="title"><a href="">Fogadóórák</a></h4>
               <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur</p>
@@ -549,7 +2031,7 @@
           </div>
           <div class="col-lg-4 col-md-6 mt-5">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
-              <div class="icon"><i class="bi bi-binoculars" style="color:#f6adad;"></i></div>
+              <div class="icon"><i class="bi bi-binoculars" style="color:#1099b3;"></i></div>
               <h4 class="title"><a href="https://www.uni-corvinus.hu/ona/hallgatoi-tanulmanyi-ugyek/ugyintezes/" target="_blank">Hallgatói tér</a></h4>
               <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                 mollit anim id est laborum</p>
@@ -558,7 +2040,7 @@
 
           <div class="col-lg-4 col-md-6 mt-5">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
-              <div class="icon"><i class="bi bi-globe" style="color: #d6394c;"></i></div>
+              <div class="icon"><i class="bi bi-globe" style="color: #BF8F55;"></i></div>
               <h4 class="title"><a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/informatikai-szolgaltatasok/microsoft-365/" target="_blank">Office 365 regisztráció</a></h4>
               <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                 praesentium voluptatum deleniti atque</p>
@@ -566,7 +2048,7 @@
           </div>
           <div class="col-lg-4 col-md-6 mt-5">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
-              <div class="icon"><i class="bi bi-clock" style="color: #751101;"></i></div>
+              <div class="icon"><i class="bi bi-clock" style="color: #012535;"></i></div>
               <h4 class="title"><a href="https://www.uni-corvinus.hu/ona/hallgatoi-tanulmanyi-ugyek/tanev-idobeosztasa/" target="_blank">Tanév rendje</a></h4>
               <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
                 soluta nobis est eligendi</p>
@@ -575,18 +2057,33 @@
         </div>
 
       </div>
-    </section><!-- End Hasznos Section -->
+    </section>
 
-    <!-- ======= Hallgatoi Élet Section ======= -->
+    <!-- Hallgatói élet -->
     <section id="hallgatoi" class="portfolio">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
           <h2>Hallgatói Élet</h2>
+        </div>
+
+        <!-- Eseménynaptár -->
+        <div class="events-calendar-section" data-aos="fade-up">
+          <h3>Közelgő események és határidők</h3>
+
+          <div id="events-filter-container" class="events-filter-container">
+          </div>
+
+          <div id="events-timeline-container" class="events-timeline-container">
+          </div>
+        </div>
+
+        <!-- Galéria -->
+        <div class="section-title" data-aos="zoom-out" style="margin-top: 60px;">
           <p>Rendezvényeink</p>
         </div>
 
-        <ul id="portfolio-flters" class="d-flex justify-content-end" data-aos="fade-up">
+        <ul id="portfolio-flters" data-aos="fade-up">
           <li data-filter="*" class="filter-active">Összes</li>
           <li data-filter=".bulik">Közgáz Bulik</li>
           <li data-filter=".filter-card">Sporthét</li>
@@ -596,22 +2093,22 @@
         <div class="row portfolio-container" data-aos="fade-up">
 
           <div class="col-lg-4 col-md-6 portfolio-item bulik">
-            <div class="portfolio-img"><img src="assets/img/bulik/dojo_season_op.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img-optimized/bulik/dojo_season_op.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Corvinus Szemeszternyitó</h4>
               <p>2025.09.18 - DOJO boutique club</p>
-              <a href="assets/img/bulik/dojo_season_op.jpg" data-gallery="portfolioGallery"
+              <a href="assets/img-optimized/bulik/dojo_season_op.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Dojo Season Opening"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item bulik">
-            <div class="portfolio-img"><img src="assets/img/bulik/dojo_season_op2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img-optimized/bulik/dojo_season_op2.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Corvinus Szemeszternyitó</h4>
               <p>2025.09.18 - DOJO boutique club</p>
-              <a href="assets/img/bulik/dojo_season_op2.jpg" data-gallery="portfolioGallery"
+              <a href="assets/img-optimized/bulik/dojo_season_op2.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
@@ -648,9 +2145,9 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item bulik">
             <div class="portfolio-img video-box">
-              <video poster="assets/img/bulik/dojo_after_movie-1-thumb.jpg" preload="metadata" playsinline muted
+              <video poster="assets/img-optimized/bulik/dojo_after_movie-1-thumb.jpg" preload="metadata" playsinline muted
                 controls>
-                <source src="assets/img/bulik/dojo_after_movie-1-vertical.mp4" type="video/mp4">
+                <source src="assets/img-optimized/bulik/dojo_after_movie-1-vertical.mp4" type="video/mp4">
                 A böngésződ nem támogatja a videó lejátszást.
               </video>
             </div>
@@ -679,11 +2176,11 @@
           </script>
 
           <div class="col-lg-4 col-md-6 portfolio-item bulik">
-            <div class="portfolio-img"><img src="assets/img/bulik/dojo_egy.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img-optimized/bulik/dojo_egy.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Közgáz & Friends</h4>
               <p>2024.09.25 - DOJO boutique club</p>
-              <a href="assets/img/bulik/dojo_egy.jpg" data-gallery="portfolioGallery"
+              <a href="assets/img-optimized/bulik/dojo_egy.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
@@ -691,11 +2188,11 @@
 
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/bulik/onedance.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img-optimized/bulik/onedance.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Corvinus Szemeszternyitó</h4>
               <p>2024.09.12 - Ötkert</p>
-              <a href="assets/img/bulik/onedance.jpg" data-gallery="portfolioGallery"
+              <a href="assets/img-optimized/bulik/onedance.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
@@ -704,11 +2201,11 @@
 
 
           <div class="col-lg-4 col-md-6 portfolio-item bulik">
-            <div class="portfolio-img"><img src="assets/img/bulik/dojo_membersonly.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img-optimized/bulik/dojo_membersonly.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Közgáz & Friends - Members Only</h4>
               <p>2025.02.19 - DOJO boutique club</p>
-              <a href="assets/img/bulik/dojo_membersonly.jpg" data-gallery="portfolioGallery"
+              <a href="assets/img-optimized/bulik/dojo_membersonly.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
@@ -716,33 +2213,33 @@
 
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/8.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img-optimized/8.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Corvinus Gólyapart</h4>
               <p>Lorem</p>
-              <a href="assets/img/8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
+              <a href="assets/img-optimized/8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
                 title="Card 1"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/9.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img-optimized/9.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Corvinus Tavaszi Bál</h4>
               <p>Lorem</p>
-              <a href="assets/img/9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
+              <a href="assets/img-optimized/9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
                 title="Card 3"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/3.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="assets/img-optimized/3.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Lorem</h4>
               <p>Lorem</p>
-              <a href="assets/img/3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
+              <a href="assets/img-optimized/3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
                 title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="Részletek"><i class="bx bx-link"></i></a>
             </div>
@@ -752,484 +2249,7 @@
 
       </div>
     </section>
-    <!-- End  Section -->
-    <!-- Start Kollegium Section -->
-
-
-    <!-- ======= Hasznos Section ======= -->
-    <section id="about" class="faq">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Rólunk</h2>
-          <p>Átláthatóság</p>
-        </div>
-
-        <ul class="faq-list">
-          <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq0">Bemutatkozás<i
-                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq0" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Bizottságaink<i
-                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq2">Közéleti juttatások<i
-                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Adatvédelem<i
-                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-                donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-                ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">HÖK Alapszabály<i
-                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
-                integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
-                Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Jegyzőkönyvek és határozatok<i
-                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-                donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-                ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Ülések<i
-                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
-                vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
-                gravida quis blandit turpis cursus in
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq7" class="collapsed question">Öntevékeny csoportok<i
-                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq7" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
-                nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
-                tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas
-                fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
-      </div>
-    </section><!-- End Hasznos Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="rolunk" class="team">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Rólunk</h2>
-          <p>Vezetőség</p>
-        </div>
-
-        <!-- Swiper -->
-        <div class="swiper teamSwiper">
-          <div class="swiper-wrapper">
-
-            <!-- === 1. tag === -->
-            <div class="swiper-slide">
-              <div class="member" data-aos="fade-up">
-                <div class="member-img">
-                  <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                  <div class="social">
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>Mészner Gerike</h4>
-                  <span>Fő Boss</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- === 2. tag === -->
-            <div class="swiper-slide">
-              <div class="member" data-aos="fade-up" data-aos-delay="100">
-                <div class="member-img">
-                  <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                  <div class="social">
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- === 3. tag === -->
-            <div class="swiper-slide">
-              <div class="member" data-aos="fade-up" data-aos-delay="200">
-                <div class="member-img">
-                  <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                  <div class="social">
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- === 4. tag === -->
-            <div class="swiper-slide">
-              <div class="member" data-aos="fade-up" data-aos-delay="300">
-                <div class="member-img">
-                  <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                  <div class="social">
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- === 5. tag === -->
-            <div class="swiper-slide">
-              <div class="member" data-aos="fade-up" data-aos-delay="300">
-                <div class="member-img">
-                  <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                  <div class="social">
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- === 6. tag === -->
-            <div class="swiper-slide">
-              <div class="member" data-aos="fade-up" data-aos-delay="300">
-                <div class="member-img">
-                  <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                  <div class="social">
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-                <div class="member-info">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Lapozó nyilak és pöttyök -->
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".teamSwiper", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          320: { slidesPerView: 1 },
-          576: { slidesPerView: 2 },
-          992: { slidesPerView: 3 },
-          1200: { slidesPerView: 4 },
-        },
-      });
-    </script>
-
-    <!-- End Team Section -->
-
-    <section id="rolunk" class="about">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Területeink</h2>
-          <p>Elnökség</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6">
-            <p>
-              A HÖK legfőbb döntéshozó testülete az Elnökség, amely a szervezet elnökéből és két alelnökéből áll. Az
-              elnök személyéről
-              kétévente, az alelnökökről évente közvetve dönthetnek a hallgatók a Küldöttgyűlés-választásokon.
-              2023 júniusában felállt új Elnökség tagjai Kovács Kristóf, Oltyán Kristóf és Schwemmer Martin. Legfőbb
-              célkitűzéseik a hallgatói
-              érdekképviseleti stratégia gyökeres átgondolása, a HÖK transzparens működésének erősítése és a belső
-              demokratikus működés növelése.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 400 fős</li>
-              <li><i class="ri-check-double-line"></i> 15 percre a 2-es metró végállomásától</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/demo.svg" alt="" class="img-fluid_kolesz">
-          </div>
-        </div>
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Területeink</h2>
-          <p>HR Terület</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/demo.svg" alt="" class="img-fluid_kolesz">
-          </div>
-          <div class="col-lg-6">
-            <p>
-             A HR Terület kezében hatalmas szervezeti felelősség van folyamatosan, hiszen ő alakítja a szervezet kultúráját,
-             támogatja a tagok szakmai fejlődését, és belsős rendezvények szervezésével erősíti a közösséget és tartja fent a motivációt.
-             Emellett felelős az új tagok beilleszkedéséért és a csapatépítésért, amely alapjaiban meghatározza a szervezet működését és hatékonyságát.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 14 fős</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Területeink</h2>
-          <p>Kommunikációs terület</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6">
-            <p>
-              A Kommunikációs Terület kezeli a Corvinus HÖK közösségi oldalait, amire videós és képi tartalmakat készítünk.
-              A Terület fontos része, hogy a hallgatókkal egy aktív és rugalmas kapcsolatot építsen ki, hogy a HÖK egy izgalmas egyetemi életet tudjon kialakítani.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 14 fős</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/teruletek/Kom.jpg" alt="" class="img-fluid_kolesz">
-          </div>
-        </div>
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Területeink</h2>
-          <p>Nemzetközi Terület</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/teruletek/Nemzi.jpg" alt="" class="img-fluid_kolesz">
-          </div>
-          <div class="col-lg-6">
-            <p>
-              A Nemzetközi Terület felelős a külföldi hallgatók integrációjáért, amit az International Students' Club által szervezett eseményeikkel segítenek.
-              Felelős emellett az érdekképviseletükért, amit a külföldi hallgatókból álló Advisory Boardon keresztül segítenek, valamint a Pannonia ösztöndíjprogram (korábban Erasmus+)
-              és egyéb programok szervezéséért, az ezekkel kapcsolatos tájékoztatásért, majd ezek bírálásáért.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 14 fős</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Területeink</h2>
-          <p>Rendezvényszervezési Terület</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6">
-            <p>
-               A Rendezvény Terület gondoskodik róla, hogy az egyetemi élet ne csak a tanulásról szóljon.
-               Segítjük a gólyák integrációját különböző izgalmas eseményekkel, emellett egész évben azon dolgozunk, hogy változatos, egyedi és felejthetetlen programokkal törjük meg a szürke hétköznapokat.
-               És persze a bulikért is mi felelünk! Célunk, hogy a hallgatók sose unatkozzanak! 
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 16 fős</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/teruletek/Rendi.jpg" alt="" class="img-fluid_kolesz">
-          </div>
-        </div>
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Területeink</h2>
-          <p>Oktatási Terület</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/demo.svg" alt="" class="img-fluid_kolesz">
-          </div>
-          <div class="col-lg-6">
-            <p>
-              Az Oktatási Terület végzi a HÖK érdekképviseleti tevékenységének meghatározó részét.
-              Tagjaik döntéshozó szereppel bírnak a különböző egyetemi bizottságokban, segítenek a hallgatói megkeresések megválaszolásában és a hallgatók érdeksérelmeinek megoldásában,
-              emellett nekik köszönhető többek között a Demonstrátori közösség építése, valamint a Szakos Delegált Program is. 
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 8 fős</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Területeink</h2>
-          <p>Diákszervezeti és Szakkollégiumi Terület</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6">
-            <p>
-              A DSZ Terület összefogja és képviseli a Diákszervezeteket és Szakkollégiumokat.
-              Közösségi, illetve szakmai programok szervezése mellett a hivatalos folyamatok,
-              pályázatok és az érdekképviselet is kiemelkedő szerepet kap.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 14 fős</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/demo.svg" alt="" class="img-fluid_kolesz">
-          </div>
-        </div>
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Területeink</h2>
-          <p>Gazdasái Terület</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6">
-            <p>
-              A Gazdasági Terület a HÖK szíve és lelke,
-              beszerzések és pénzügyi elszámolások mellett mi felelünk a HÖK teljes költségvetéséért és pályázatok lebonyolításáért. 
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 10 fős</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/teruletek/Gazdi.jpg" alt="" class="img-fluid_kolesz">
-          </div>
-        </div>
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Területeink</h2>
-          <p>Hallgatói és Szociális Bizottság</p>
-        </div>
-
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <img src="assets/img/teruletek/HSZB.jpg" alt="" class="img-fluid_kolesz">
-          </div>
-          <div class="col-lg-6">
-            <p>
-              A Hallgatói Szociális Bizottság kulcsszerepet játszik az egyetemi ösztöndíjak és a kollégiumi pályázatok igazságos,
-              precíz bírálatában. Tagjai fogadóórákkal, hallgatói segédletekkel és közösségimédia-posztokkal segítik a hallgatókat a pályázatok hiánytalan leadásában.
-              Emellett aktívan hozzájárulnak a hallgatói érdekképviselethez, és részt vesznek az egyetemi döntéshozatalban: félévről félévre felülvizsgálják a pályázatok szempontrendszereit,
-              valamint módosítási javaslatokat tesznek, hogy azok minél jobban illeszkedjenek a hallgatók aktuális helyzetéhez.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> 17 fős</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======= Contact Section ======= -->
+    <!-- Contact -->
     <section id="contact" class="contact">
       <div class="container">
 
@@ -1298,44 +2318,43 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
-  <!-- ======= Footer ======= -->
+  <!-- Footer -->
   <footer id="footer">
     <div class="container">
       <h3>Corvinus HÖK</h3>
       <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
-        &copy; 2023 – <strong><span>Corvinus HÖK</span></strong>. Minden jog fenntartva. (Kovalik-Deák Bercel)
+        &copy; 2026 – <strong><span>Corvinus HÖK</span></strong>. Minden jog fenntartva.
       </div>
 
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Vendor JS -->
+  <script defer src="assets/vendor/aos/aos.js"></script>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script defer src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script defer src="assets/vendor/php-email-form/validate.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- JS -->
+  <script defer src="assets/js/constants.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/corvinus-scholarship.js"></script>
+  <script defer src="assets/js/events-calendar.js"></script>
 
 </body>
 
