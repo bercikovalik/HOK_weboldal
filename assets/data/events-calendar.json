@@ -14,16 +14,16 @@
       "color": "#55282e"
     },
     {
-      "id": "bulik",
+      "id": "rendezvenyeink",
       "name": "Rendezvényeink",
-      "nameEn": "Parties/Entertainment",
+      "nameEn": "Events",
       "color": "#6d2180"
     },
     {
-      "id": "sport",
-      "name": "Sport",
-      "nameEn": "Sports",
-      "color": "#09ad86"
+      "id": "hok",
+      "name": "HÖK",
+      "nameEn": "HÖK",
+      "color": "#b8915d"
     },
     {
       "id": "adminisztrativ",
