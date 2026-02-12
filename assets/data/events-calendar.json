@@ -42,8 +42,8 @@
       "category": "tanulmanyi",
       "description": "A tárgyfelvétel véglegesítése",
       "descriptionEn": "Finalizing subject registration",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
+      "location": "Neptun",
+      "locationEn": "Neptun",
       "link": null
     },
     {
@@ -55,8 +55,8 @@
       "category": "tanulmanyi",
       "description": "Féléves regisztrációs időszak",
       "descriptionEn": "Semester registration period",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
+      "location": "Neptun",
+      "locationEn": "Neptun",
       "link": null
     },
     {
@@ -68,8 +68,8 @@
       "category": "tanulmanyi",
       "description": "A félév szorgalmi időszaka",
       "descriptionEn": "Study period of the semester",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
+      "location": "Neptun",
+      "locationEn": "Neptun",
       "link": null
     },
     {
@@ -81,8 +81,8 @@
       "category": "tanulmanyi",
       "description": "Intenzív kurzusok hete",
       "descriptionEn": "Week for intensive courses",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
+      "location": "Neptun",
+      "locationEn": "Neptun",
       "link": null
     },
     {
@@ -94,8 +94,8 @@
       "category": "tanulmanyi",
       "description": "Tanítási szünet",
       "descriptionEn": "Teaching break",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
+      "location": "Neptun",
+      "locationEn": "Neptun",
       "link": null
     },
     {
@@ -107,8 +107,8 @@
       "category": "tanulmanyi",
       "description": "Szakdolgozatok feltöltésének időszaka",
       "descriptionEn": "Period for thesis submission",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
+      "location": "Neptun",
+      "locationEn": "Neptun",
       "link": null
     },
     {
@@ -120,8 +120,8 @@
       "category": "tanulmanyi",
       "description": "Szakirány/specializáció választása",
       "descriptionEn": "Selection of specialization",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
+      "location": "Neptun",
+      "locationEn": "Neptun",
       "link": null
     },
     {
@@ -133,8 +133,8 @@
       "category": "tanulmanyi",
       "description": "A félév vizsgaidőszaka",
       "descriptionEn": "Exam period of the semester",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
+      "location": "Neptun",
+      "locationEn": "Neptun",
       "link": null
     },
     {
@@ -146,8 +146,47 @@
       "category": "tanulmanyi",
       "description": "Záróvizsgák időszaka",
       "descriptionEn": "Period for final exams",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
+      "location": "Neptun",
+      "locationEn": "Neptun",
+      "link": null
+    },
+    {
+      "id": 10,
+      "title": "Kitelepülés",
+      "titleEn": " - ",
+      "date": "2026-02-16",
+      "endDate": "2026-02-18",
+      "category": "hok",
+      "description": " - ",
+      "descriptionEn": " - ",
+      "location": " - ",
+      "locationEn": " - ",
+      "link": null
+    },
+    {
+      "id": 10,
+      "title": "Infoest",
+      "titleEn": " - ",
+      "date": "2026-02-23",
+      "endDate": null,
+      "category": "hok",
+      "description": " - ",
+      "descriptionEn": " - ",
+      "location": " - ",
+      "locationEn": " - ",
+      "link": null
+    },
+    {
+      "id": 11,
+      "title": "AC interjúk hete",
+      "titleEn": " - ",
+      "date": "2026-03-9",
+      "endDate": "2026-03-13",
+      "category": "hok",
+      "description": " - ",
+      "descriptionEn": " - ",
+      "location": " - ",
+      "locationEn": " - ",
       "link": null
     }
   ]
