@@ -25,6 +25,20 @@
       thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.remove('d-block');
 
+      // @uni-corvinus.hu email validáció
+      const emailInput = thisForm.querySelector('input[name="email"]');
+      if (emailInput) {
+        const emailVal = emailInput.value.trim().toLowerCase();
+        const isEn = document.documentElement.lang === 'en';
+        if (!emailVal.endsWith('@uni-corvinus.hu')) {
+          const errMsg = isEn
+            ? 'Please use your @uni-corvinus.hu university email address.'
+            : 'Kérjük, add meg a @uni-corvinus.hu végű egyetemi email címedet!';
+          displayError(thisForm, errMsg);
+          return;
+        }
+      }
+
       let formData = new FormData( thisForm );
 
       if ( recaptcha ) {
@@ -59,12 +73,12 @@
       if( response.ok ) {
         return response.text();
       } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+        throw new Error(`Hálózati hiba (${response.status}). Kérjük, próbáld újra.`);
       }
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+      if (data.trim() === 'OK') {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {

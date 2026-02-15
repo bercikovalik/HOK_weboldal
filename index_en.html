@@ -58,6 +58,7 @@
               <li><a href="#osztondij" class="scholarship-nav-link" data-tab="tab-5" onclick="window.handleScholarshipClick && window.handleScholarshipClick(event, this)">Calculator & Statistics</a></li>
             </ul>
           </li>
+          <!-- IDEIGLENESEN KIKOMMENTEZVE
           <li class="dropdown nav-link scrollto"><a href="#hasznos"><span>Useful</span> <i
                 class="bi bi-chevron-down"></i></a>
             <ul>
@@ -67,6 +68,7 @@
               <li><a href="#hasznos">Student Portal</a></li>
             </ul>
           </li>
+          -->
           <li><a class="nav-link scrollto" href="#hallgatoi">Student Life</a></li>
           <li><a class="nav-link" href="atlathatosag_en.html">Transparency</a></li>
           <li><a class="nav-link" href="rolunk_en.html">About Us</a></li>
@@ -84,7 +86,7 @@
 
   <!-- Hero -->
   <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
-    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+    <div id="heroCarousel" data-bs-interval="10000" class="container carousel carousel-fade" data-bs-ride="carousel">
 
       <!-- Slide 1 -->
       <div class="carousel-item active">
@@ -151,6 +153,9 @@
   </section>
 
   <main id="main">
+
+    <!-- Recruitment banner (JS renders based on constants.js RECRUITMENT config) -->
+    <div id="tagfelvetel-banner-slot"></div>
 
     <!-- Introduction -->
     <section id="#" class="about">
@@ -587,7 +592,7 @@
                       </div>
 
                       <div class="scholarship-actions mt-4">
-                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/teljesitmenyalapu-osztondijak/"
+                        <a href="https://www.uni-corvinus.hu/downloads/b90c.jqgic6/corvinus-osztondij-felulvizsgalat-palyazat-2025-junius.pdf"
                            target="_blank"
                            class="btn btn-primary">
                           <i class="ri-external-link-line"></i> Details in regulations
@@ -725,9 +730,6 @@
                            class="btn btn-primary">
                           <i class="ri-external-link-line"></i> Details in regulations
                         </a>
-                        <a href="#" class="btn btn-outline-primary">
-                          <i class="ri-file-edit-line"></i> Application form
-                        </a>
                       </div>
                     </div>
                     <div class="col-lg-4 col-md-12 text-center d-none d-lg-block">
@@ -784,12 +786,12 @@
                       </div>
 
                       <div class="scholarship-actions mt-4">
-                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/szocialis-alapu-osztondijak/"
+                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/szocialis-osztondijak/"
                            target="_blank"
                            class="btn btn-primary">
                           <i class="ri-external-link-line"></i> Details in regulations
                         </a>
-                        <a href="#"
+                        <a href="https://www.uni-corvinus.hu/downloads/caoh.1h9mwb9/hallgatoi-kisokos-eltartottak.pdf"
                            target="_blank"
                            class="btn btn-outline-primary">
                           <i class="ri-book-open-line"></i> Social Guide
@@ -829,7 +831,7 @@
                       </div>
 
                       <div class="scholarship-actions mt-4">
-                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/szocialis-alapu-osztondijak/"
+                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/szocialis-osztondijak/"
                            target="_blank"
                            class="btn btn-primary">
                           <i class="ri-external-link-line"></i> Details in regulations
@@ -885,13 +887,10 @@
                       </div>
 
                       <div class="scholarship-actions mt-4">
-                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/"
+                        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/osztondij/teljesitmenyalapu-osztondijak/"
                            target="_blank"
                            class="btn btn-primary">
                           <i class="ri-external-link-line"></i> Details in regulations
-                        </a>
-                        <a href="#" class="btn btn-outline-primary">
-                          <i class="ri-file-edit-line"></i> Application form
                         </a>
                       </div>
                     </div>
@@ -1962,7 +1961,7 @@
       </div>
     </section>
 
-    <!-- Useful Links -->
+    <!-- IDEIGLENESEN KIKOMMENTEZVE - Useful Links
     <section id="hasznos" class="services">
       <div class="container">
 
@@ -1975,7 +1974,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="icon-box" data-aos="zoom-in-left">
               <div class="icon"><i class="bi bi-briefcase" style="color: #BF8F55;"></i></div>
-              <h4 class="title scrollto"><a href="#teruletek">Our Departments</a></h4>
+              <h4 class="title"><a href="rolunk_en.html">Our Departments</a></h4>
               <p class="description">Learn about HÖK's departments, what they do, who leads them,
                 and find their contact information</p>
             </div>
@@ -2026,6 +2025,7 @@
 
       </div>
     </section>
+    -->
 
     <!-- Student Life -->
     <section id="hallgatoi" class="portfolio">
@@ -2279,63 +2279,73 @@
           <p>How to get in touch with us</p>
         </div>
 
-        <div class="row mt-5">
+        <!-- Map Card -->
+        <div class="row">
+          <div class="col-12">
+            <div class="contact-map" data-aos="fade-up">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5392.386004257662!2d19.04872829357911!3d47.48615339999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc502488be69%3A0xc5b7e757fb438129!2sBudapesti%20Corvinus%20Egyetem!5e0!3m2!1shu!2shu!4v1709650173387!5m2!1shu!2shu"
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
 
-          <div class="col-lg-4" data-aos="fade-right">
-            <div class="info">
-              <div class="address">
+        <!-- Info Cards -->
+        <div class="row contact-info-row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-md-6">
+            <div class="contact-item">
+              <div class="contact-item__icon">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Location</h4>
+              </div>
+              <div class="contact-item__text">
+                <h4>Location:</h4>
                 <p>Corvinus E.17 office</p>
               </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Phone number:</h4>
-                <p>+360000000</p>
-              </div>
-
             </div>
-
           </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5392.386004257662!2d19.04872829357911!3d47.48615339999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc502488be69%3A0xc5b7e757fb438129!2sBudapesti%20Corvinus%20Egyetem!5e0!3m2!1shu!2shu!4v1709650173387!5m2!1shu!2shu"
-              width="855" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                </div>
+          <div class="col-md-6">
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <i class="bi bi-envelope"></i>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              <div class="contact-item__text">
+                <h4>Email:</h4>
+                <p>hok@uni-corvinus.hu</p>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send</button></div>
-            </form>
-
+            </div>
           </div>
+        </div>
 
+        <!-- Form Card -->
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="contact-form">
+              <h3 class="contact-form__title">Write to us!</h3>
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Corvinus email (@uni-corvinus.hu)" title="Please enter your @uni-corvinus.hu university email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Send</button></div>
+              </form>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -2376,6 +2386,7 @@
 
   <!-- JS -->
   <script defer src="assets/js/constants.js"></script>
+  <script defer src="assets/js/recruitment-banner.js"></script>
   <script defer src="assets/js/main.js"></script>
   <script defer src="assets/js/corvinus-scholarship.js"></script>
   <script defer src="assets/js/events-calendar.js"></script>

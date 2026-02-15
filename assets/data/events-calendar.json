@@ -188,6 +188,75 @@
       "location": " - ",
       "locationEn": " - ",
       "link": null
+    },
+    {
+      "id": 12,
+      "title": "Daytime Pop-up Party",
+      "titleEn": " - ",
+      "date": "2026-02-18",
+      "endDate":null,
+      "category": "rendezvenyeink",
+      "description": " - ",
+      "descriptionEn": " - ",
+      "location": "Corvinus C épülete elött",
+      "locationEn": " -",
+      "link": null
+    },
+    {
+      "id": 13,
+      "title": "Season Opening, Maroni",
+      "titleEn": " - ",
+      "date": "2026-02-19",
+      "endDate":null,
+      "category": "rendezvenyeink",
+      "description": " - ",
+      "descriptionEn": " - ",
+      "location": "",
+      "locationEn": " -",
+      "link": null
+    },
+    {
+      "id": 14,
+      "title": "Kocsmatúra",
+      "titleEn": " - ",
+      "date": "2026-02-26",
+      "endDate":null,
+      "category": "rendezvenyeink",
+      "description": " - ",
+      "descriptionEn": " - ",
+      "location": "",
+      "locationEn": " -",
+      "link": null
+    },
+    {
+      "id": 14,
+      "title": "Közgáz & Friends Members Only, Dojo",
+      "titleEn": " - ",
+      "date": "2026-03",
+      "endDate":null,
+      "category": "rendezvenyeink",
+      "description": " - ",
+      "descriptionEn": " - ",
+      "location": "",
+      "locationEn": " -",
+      "link": null
+    },
+    {
+      "id": 15,
+      "title": "Sporthét",
+      "titleEn": " - ",
+      "date": "2026-04",
+      "endDate":null,
+      "category": "rendezvenyeink",
+      "description": " - ",
+      "descriptionEn": " - ",
+      "location": "",
+      "locationEn": " -",
+      "link": null
     }
+
+
+
+
   ]
 }
