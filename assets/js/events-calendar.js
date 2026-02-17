@@ -201,9 +201,9 @@
       return;
     }
 
-    const filteredEvents = eventsData.events.filter((event) =>
-      selectedCategories.includes(event.category)
-    );
+    const filteredEvents = eventsData.events
+      .filter((event) => selectedCategories.includes(event.category))
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
 
     // Rejtett megjelenit
     const wasHidden = container.classList.contains('timeline-hidden');
