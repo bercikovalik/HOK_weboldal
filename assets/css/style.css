@@ -1935,6 +1935,34 @@ section {
   text-decoration: none;
 }
 
+/* Department social links (rolunk.html sections) */
+.dept-social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.dept-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  font-size: 18px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.dept-social-links a:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
 #footer .copyright {
   margin: 0 0 5px 0;
 }
@@ -2270,10 +2298,35 @@ section {
   justify-content: flex-start;
 }
 
+/* Külső link ikon – csak hover esetén jelenik meg (desktop) */
+.event-link::after {
+  content: '↗';
+  font-size: 11px;
+  font-style: normal;
+  opacity: 0;
+  margin-left: 2px;
+  transition: opacity 0.25s ease;
+  align-self: center;
+  line-height: 1;
+}
+
+.event-link:hover::after {
+  opacity: 0.65;
+}
+
 .event-link:hover .event-date,
 .event-link:hover .event-title-text {
   color: currentColor;
-  opacity: 0.8;
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Mobilon az ikon mindig látható, hover nincs */
+@media (max-width: 768px) {
+  .event-link::after {
+    opacity: 0.55;
+  }
 }
 
 .event-description {

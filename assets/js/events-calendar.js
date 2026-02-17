@@ -123,7 +123,7 @@
 
       // Link
       const hasLink = event.link && event.link.trim() !== '';
-      const linkStart = hasLink ? `<a href="${event.link}" class="event-link">` : '';
+      const linkStart = hasLink ? `<a href="${event.link}" class="event-link" target="_blank" rel="noopener noreferrer">` : '';
       const linkEnd = hasLink ? '</a>' : '';
 
       html += `
