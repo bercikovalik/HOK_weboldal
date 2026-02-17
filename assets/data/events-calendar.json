@@ -11,25 +11,19 @@
       "id": "tanulmanyi",
       "name": "Tanulmányi",
       "nameEn": "Academic",
-      "color": "#55282e"
+      "color": "#751101"
     },
     {
       "id": "rendezvenyeink",
       "name": "Rendezvényeink",
       "nameEn": "Events",
-      "color": "#6d2180"
+      "color": "#025f49"
     },
     {
       "id": "hok",
       "name": "HÖK",
       "nameEn": "HÖK",
       "color": "#b8915d"
-    },
-    {
-      "id": "adminisztrativ",
-      "name": "Adminisztratív",
-      "nameEn": "Administrative",
-      "color": "#013649"
     }
   ],
   "events": [
@@ -40,8 +34,8 @@
       "date": "2026-02-09",
       "endDate": null,
       "category": "tanulmanyi",
-      "description": "A tárgyfelvétel véglegesítése",
-      "descriptionEn": "Finalizing subject registration",
+      "description": "",
+      "descriptionEn": "",
       "location": "Neptun",
       "locationEn": "Neptun",
       "link": null
@@ -53,8 +47,8 @@
       "date": "2026-02-09",
       "endDate": "2026-02-22",
       "category": "tanulmanyi",
-      "description": "Féléves regisztrációs időszak",
-      "descriptionEn": "Semester registration period",
+      "description": "",
+      "descriptionEn": "",
       "location": "Neptun",
       "locationEn": "Neptun",
       "link": null
@@ -66,8 +60,8 @@
       "date": "2026-02-16",
       "endDate": "2026-05-24",
       "category": "tanulmanyi",
-      "description": "A félév szorgalmi időszaka",
-      "descriptionEn": "Study period of the semester",
+      "description": "",
+      "descriptionEn": "",
       "location": "Neptun",
       "locationEn": "Neptun",
       "link": null
@@ -79,8 +73,8 @@
       "date": "2026-03-30",
       "endDate": "2026-04-02",
       "category": "tanulmanyi",
-      "description": "Intenzív kurzusok hete",
-      "descriptionEn": "Week for intensive courses",
+      "description": "",
+      "descriptionEn": "",
       "location": "Neptun",
       "locationEn": "Neptun",
       "link": null
@@ -92,8 +86,8 @@
       "date": "2026-04-03",
       "endDate": "2026-04-10",
       "category": "tanulmanyi",
-      "description": "Tanítási szünet",
-      "descriptionEn": "Teaching break",
+      "description": "",
+      "descriptionEn": "",
       "location": "Neptun",
       "locationEn": "Neptun",
       "link": null
@@ -105,8 +99,8 @@
       "date": "2026-05-04",
       "endDate": "2026-05-15",
       "category": "tanulmanyi",
-      "description": "Szakdolgozatok feltöltésének időszaka",
-      "descriptionEn": "Period for thesis submission",
+      "description": "",
+      "descriptionEn": "",
       "location": "Neptun",
       "locationEn": "Neptun",
       "link": null
@@ -118,8 +112,8 @@
       "date": "2026-05-18",
       "endDate": "2026-05-22",
       "category": "tanulmanyi",
-      "description": "Szakirány/specializáció választása",
-      "descriptionEn": "Selection of specialization",
+      "description": "",
+      "descriptionEn": "",
       "location": "Neptun",
       "locationEn": "Neptun",
       "link": null
@@ -131,8 +125,8 @@
       "date": "2026-05-25",
       "endDate": "2026-06-20",
       "category": "tanulmanyi",
-      "description": "A félév vizsgaidőszaka",
-      "descriptionEn": "Exam period of the semester",
+      "description": "",
+      "descriptionEn": "",
       "location": "Neptun",
       "locationEn": "Neptun",
       "link": null
@@ -144,8 +138,8 @@
       "date": "2026-06-15",
       "endDate": "2026-06-24",
       "category": "tanulmanyi",
-      "description": "Záróvizsgák időszaka",
-      "descriptionEn": "Period for final exams",
+      "description": "",
+      "descriptionEn": "",
       "location": "Neptun",
       "locationEn": "Neptun",
       "link": null
@@ -157,10 +151,10 @@
       "date": "2026-02-16",
       "endDate": "2026-02-18",
       "category": "hok",
-      "description": " - ",
-      "descriptionEn": " - ",
-      "location": " - ",
-      "locationEn": " - ",
+      "description": "",
+      "descriptionEn": "",
+      "location": "Corvinus",
+      "locationEn": "",
       "link": null
     },
     {
@@ -170,11 +164,11 @@
       "date": "2026-02-23",
       "endDate": null,
       "category": "hok",
-      "description": " - ",
-      "descriptionEn": " - ",
-      "location": " - ",
-      "locationEn": " - ",
-      "link": null
+      "description": "",
+      "descriptionEn": "",
+      "location": "Corvinus",
+      "locationEn": "Corvinus",
+      "link": "https://www.facebook.com/events/2785581868461640?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22search%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D&locale=hu_HU"
     },
     {
       "id": 11,
@@ -183,10 +177,10 @@
       "date": "2026-03-9",
       "endDate": "2026-03-13",
       "category": "hok",
-      "description": " - ",
-      "descriptionEn": " - ",
-      "location": " - ",
-      "locationEn": " - ",
+      "description": "",
+      "descriptionEn": "",
+      "location": "Corvinus",
+      "locationEn": "Corvinus",
       "link": null
     },
     {
@@ -196,65 +190,64 @@
       "date": "2026-02-18",
       "endDate":null,
       "category": "rendezvenyeink",
-      "description": " - ",
-      "descriptionEn": " - ",
+      "description": "",
+      "descriptionEn": "",
       "location": "Corvinus C épülete elött",
       "locationEn": " -",
-      "link": null
+      "link": "https://www.facebook.com/events/2655838414782774?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D&locale=hu_HU"
     },
     {
       "id": 13,
-      "title": "Season Opening, Maroni",
+      "title": "Season Opening - Maroni",
       "titleEn": " - ",
       "date": "2026-02-19",
       "endDate":null,
       "category": "rendezvenyeink",
-      "description": " - ",
-      "descriptionEn": " - ",
-      "location": "",
-      "locationEn": " -",
-      "link": null
+      "description": "",
+      "descriptionEn": "",
+      "location": "Maroni Budapest",
+      "locationEn": "Maroni Budapest",
+      "link": "https://www.facebook.com/events/1210945730519075?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D&locale=hu_HU"
     },
     {
       "id": 14,
       "title": "Kocsmatúra",
-      "titleEn": " - ",
+      "titleEn": "",
       "date": "2026-02-26",
       "endDate":null,
       "category": "rendezvenyeink",
-      "description": " - ",
-      "descriptionEn": " - ",
-      "location": "",
+      "description": "",
+      "descriptionEn": "",
+      "location": "Fővám tér",
       "locationEn": " -",
-      "link": null
+      "link": "https://www.facebook.com/events/838405259252941?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D&locale=hu_HU"
     },
     {
       "id": 14,
-      "title": "Közgáz & Friends Members Only, Dojo",
+      "title": "Közgáz & Friends - Members Only, Dojo",
       "titleEn": " - ",
-      "date": "2026-03",
+      "date": "2026-03-19",
       "endDate":null,
       "category": "rendezvenyeink",
-      "description": " - ",
-      "descriptionEn": " - ",
-      "location": "",
-      "locationEn": " -",
-      "link": null
+      "description": "",
+      "descriptionEn": "",
+      "location": "Dojo Club",
+      "locationEn": "Dojo Club",
+      "link": "https://www.facebook.com/events/1241596167473250?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D&locale=hu_HU"
     },
     {
       "id": 15,
       "title": "Sporthét",
-      "titleEn": " - ",
+      "titleEn": "Sport week",
       "date": "2026-04",
       "endDate":null,
       "category": "rendezvenyeink",
-      "description": " - ",
-      "descriptionEn": " - ",
+      "description": "TBA",
+      "descriptionEn": "",
       "location": "",
-      "locationEn": " -",
+      "locationEn": "",
       "link": null
     }
-
 
 
 
