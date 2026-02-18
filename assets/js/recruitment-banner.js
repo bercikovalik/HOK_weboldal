@@ -1,10 +1,14 @@
-
+// ============================================================
+// Tagfelvetel Banner
+// Ki/be kapcsolas: enabled → true / false
+// Uj felev: applyUrl, infoUrl es period frissitese
+// ============================================================
 (function () {
   'use strict';
 
   // --- CONFIG (csak ezt kell szerkeszteni) ---
   const RECRUITMENT = {
-    enabled: false,
+    enabled: true,
     applyUrl: 'https://forms.cloud.microsoft/pages/responsepage.aspx?id=uAHd-HZyzkqqnVdn8PSlr4kxfb5v2ttAoKPhI7QECNFUNklFQVgyQzRXOTRYRTM5TldMR1U0NDJZSi4u&origin=lprLink&route=shorturl',
     infoUrl: 'tagfelvetel.html',
     period: {
