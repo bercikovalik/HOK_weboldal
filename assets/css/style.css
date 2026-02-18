@@ -1935,6 +1935,7 @@ section {
   text-decoration: none;
 }
 
+/* Department social links (rolunk.html sections) */
 .dept-social-links {
   display: flex;
   gap: 10px;
@@ -2297,6 +2298,7 @@ section {
   justify-content: flex-start;
 }
 
+/* Külső link ikon – csak hover esetén jelenik meg (desktop) */
 .event-link::after {
   content: '↗';
   font-size: 11px;
@@ -2320,6 +2322,7 @@ section {
   text-underline-offset: 3px;
 }
 
+/* Mobilon az ikon mindig látható, hover nincs */
 @media (max-width: 768px) {
   .event-link::after {
     opacity: 0.55;

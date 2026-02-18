@@ -203,6 +203,7 @@
 
     const filteredEvents = eventsData.events
       .filter((event) => selectedCategories.includes(event.category))
+      .filter((event) => currentLanguage === 'hu' || !event.hungarianOnly)
       .sort((a, b) => new Date(a.date) - new Date(b.date));
 
     // Rejtett megjelenit
@@ -227,16 +228,18 @@
     const lang = currentLanguage;
     let html = '';
 
-    eventsData.categories.forEach((category) => {
-      const name = lang === 'en' ? category.nameEn : category.name;
-      html += `
-        <label class="event-filter-label" style="--category-color: ${category.color};">
-          <input type="checkbox" class="event-filter-checkbox" value="${category.id}" checked>
-          <span class="filter-color-indicator"></span>
-          <span class="filter-name">${name}</span>
-        </label>
-      `;
-    });
+    eventsData.categories
+      .filter((cat) => lang === 'hu' ? !cat.englishOnly : !cat.hungarianOnly)
+      .forEach((category) => {
+        const name = lang === 'en' ? category.nameEn : category.name;
+        html += `
+          <label class="event-filter-label" style="--category-color: ${category.color};">
+            <input type="checkbox" class="event-filter-checkbox" value="${category.id}" checked>
+            <span class="filter-color-indicator"></span>
+            <span class="filter-name">${name}</span>
+          </label>
+        `;
+      });
 
     container.innerHTML = html;
 
