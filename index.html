@@ -532,13 +532,11 @@
                   const targetPane = document.querySelector(targetId);
 
                   if (targetPane) {
-                    // Hide all tab panes INSTANTLY (no delay)
                     const allPanes = document.querySelectorAll('.tab-content .tab-pane');
                     allPanes.forEach(function(pane) {
                       pane.classList.remove('active', 'show');
                     });
 
-                    // Show target pane INSTANTLY (CSS handles the smooth opacity transition)
                     targetPane.classList.add('active', 'show');
                   }
 
