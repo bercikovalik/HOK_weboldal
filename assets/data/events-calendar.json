@@ -11,27 +11,19 @@
       "id": "tanulmanyi",
       "name": "Tanulmányi",
       "nameEn": "Academic",
-      "color": "#55282e"
+      "color": "#751101"
     },
     {
       "id": "rendezvenyeink",
       "name": "Rendezvényeink",
       "nameEn": "Events",
-      "color": "#6d2180"
+      "color": "#025f49"
     },
     {
       "id": "hok",
       "name": "HÖK",
       "nameEn": "HÖK",
-      "color": "#b8915d",
-      "hungarianOnly": true
-    },
-    {
-      "id": "isc",
-      "name": "ISC",
-      "nameEn": "ISC",
-      "color": "#1099b3",
-      "englishOnly": true
+      "color": "#b8915d"
     }
   ],
   "events": [
@@ -159,7 +151,6 @@
       "date": "2026-02-16",
       "endDate": "2026-02-18",
       "category": "hok",
-      "hungarianOnly": true,
       "description": "",
       "descriptionEn": "",
       "location": "Corvinus",
@@ -173,7 +164,6 @@
       "date": "2026-02-23",
       "endDate": null,
       "category": "hok",
-      "hungarianOnly": true,
       "description": "",
       "descriptionEn": "",
       "location": "Corvinus",
@@ -184,10 +174,9 @@
       "id": 11,
       "title": "AC interjúk hete",
       "titleEn": " - ",
-      "date": "2026-03-09",
+      "date": "2026-03-9",
       "endDate": "2026-03-13",
       "category": "hok",
-      "hungarianOnly": true,
       "description": "",
       "descriptionEn": "",
       "location": "Corvinus",
@@ -197,20 +186,20 @@
     {
       "id": 12,
       "title": "Daytime Pop-up Party",
-      "titleEn": "Daytime Pop-up Party",
+      "titleEn": " - ",
       "date": "2026-02-18",
       "endDate":null,
       "category": "rendezvenyeink",
       "description": "",
       "descriptionEn": "",
       "location": "Corvinus C épülete elött",
-      "locationEn": "Front of the Corvinus C building",
+      "locationEn": " -",
       "link": "https://www.facebook.com/events/2655838414782774?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D&locale=hu_HU"
     },
     {
       "id": 13,
       "title": "Season Opening - Maroni",
-      "titleEn": "Season Opening - Maroni",
+      "titleEn": " - ",
       "date": "2026-02-19",
       "endDate":null,
       "category": "rendezvenyeink",
@@ -227,7 +216,6 @@
       "date": "2026-02-26",
       "endDate":null,
       "category": "rendezvenyeink",
-      "hungarianOnly": true,
       "description": "",
       "descriptionEn": "",
       "location": "Fővám tér",
@@ -237,7 +225,7 @@
     {
       "id": 14,
       "title": "Közgáz & Friends - Members Only, Dojo",
-      "titleEn": "Közgáz & Friends - Members Only, Dojo",
+      "titleEn": " - ",
       "date": "2026-03-19",
       "endDate":null,
       "category": "rendezvenyeink",
@@ -258,32 +246,6 @@
       "descriptionEn": "",
       "location": "",
       "locationEn": "",
-      "link": null
-    },
-    {
-      "id": 20,
-      "title": "ISC  Event",
-      "titleEn": "ISC  Event",
-      "date": "2026-02-20",
-      "endDate": null,
-      "category": "isc",
-      "description": "",
-      "descriptionEn": "Event for international students hosted by the International Student Club.",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
-      "link": null
-    },
-    {
-      "id": 21,
-      "title": "ISC Night",
-      "titleEn": "ISC Night",
-      "date": "2026-03-25",
-      "endDate": null,
-      "category": "isc",
-      "description": "",
-      "descriptionEn": "",
-      "location": "Corvinus",
-      "locationEn": "Corvinus",
       "link": null
     }
 
