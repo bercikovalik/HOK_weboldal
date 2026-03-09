@@ -1428,6 +1428,37 @@ section {
   padding: 10px 0 0 25px;
 }
 
+.faq .faq-list .doc-links {
+  list-style: none;
+  padding: 10px 0 5px 25px;
+  margin-bottom: 0;
+}
+
+.faq .faq-list .doc-links li {
+  border: none;
+  padding: 6px 0;
+}
+
+.faq .faq-list .doc-links li a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+
+.faq .faq-list .doc-links li a i {
+  position: static;
+  font-size: 1rem;
+  top: auto;
+}
+
+.faq .faq-list .doc-links li a:hover {
+  color: var(--color-primary);
+}
+
 .faq .faq-list .icon-show {
   display: none;
 }
