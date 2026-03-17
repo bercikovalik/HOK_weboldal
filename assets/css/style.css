@@ -639,7 +639,52 @@ section {
 
 /* Rolunk */
 .about {
-  padding-top: 80px;
+  padding-top: 100px;
+}
+
+.dept-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 0 16px 0;
+  margin-bottom: 16px;
+}
+
+.dept-title::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 28px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.dept-title p {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: var(--font-bold);
+  color: var(--color-text-dark);
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+/* Területek között*/
+.about .row.content {
+  align-items: center;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.about .row.content:last-of-type {
+  padding-bottom: 28px;
+}
+
+@media (max-width: 991px) {
+  .about .row.content {
+    row-gap: 1.5rem;
+  }
 }
 
 .about .content h3 {
@@ -930,7 +975,12 @@ section {
 }
 
 .img-fluid_kolesz {
-  max-width: 80%;
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
 }
 
 /* Portfolio */
