@@ -715,6 +715,10 @@ section {
   line-height: 1;
 }
 
+.about .content p {
+  text-align: justify;
+}
+
 .about .content p:last-child {
   margin-bottom: 0;
 }

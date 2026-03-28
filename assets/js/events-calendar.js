@@ -68,7 +68,12 @@
   }
 
   // Datum format
-  function formatDate(dateString) {
+  function formatDate(dateString, lang) {
+    if (lang === 'en') {
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const [year, month, day] = dateString.split('-');
+      return `${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
+    }
     return dateString.replace(/-/g, '.');
   }
 
@@ -113,9 +118,9 @@
       const location = lang === 'en' ? event.locationEn : event.location;
 
       // Datum
-      let dateDisplay = formatDate(event.date);
+      let dateDisplay = formatDate(event.date, lang);
       if (event.endDate) {
-        dateDisplay += ' - ' + formatDate(event.endDate);
+        dateDisplay += ' – ' + formatDate(event.endDate, lang);
       }
 
       // Kor tipus

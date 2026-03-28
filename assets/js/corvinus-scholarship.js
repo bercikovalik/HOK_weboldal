@@ -176,7 +176,9 @@
     });
 
     // Dropdown reset
-    elements.courseSelect.innerHTML = '<option value="">-- Válassz szakot --</option>';
+    const isEn = document.documentElement.lang === 'en';
+    const placeholder = isEn ? '-- Select a programme --' : '-- Válassz szakot --';
+    elements.courseSelect.innerHTML = `<option value="">${placeholder}</option>`;
 
     // ABC rendezes
     const sortedCourses = Array.from(courses.values()).sort((a, b) =>
