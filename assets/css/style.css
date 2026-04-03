@@ -145,7 +145,7 @@ h6 {
 
 .subpage-header .breadcrumb {
   justify-content: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .subpage-header .breadcrumb a {
@@ -3419,4 +3419,20 @@ button[type='submit']:focus-visible {
   .back-to-top i {
     animation: none;
   }
+}
+
+/* Generic section */
+.generic-section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.generic-section .content p {
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.generic-section .content p:last-child {
+  margin-bottom: 0;
 }
