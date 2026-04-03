@@ -1,5 +1,5 @@
 // ============================================================
-// Tagfelvetel Banner
+// Valasztas Banner
 // Ki/be kapcsolas: enabled → true / false
 // Uj felev: applyUrl, infoUrl es period frissitese
 // ============================================================
@@ -7,19 +7,18 @@
   'use strict';
 
   // --- CONFIG (csak ezt kell szerkeszteni) ---
-  const RECRUITMENT = {
-    enabled: false,
-    applyUrl: 'https://forms.cloud.microsoft/pages/responsepage.aspx?id=uAHd-HZyzkqqnVdn8PSlr4kxfb5v2ttAoKPhI7QECNFUNklFQVgyQzRXOTRYRTM5TldMR1U0NDJZSi4u&origin=lprLink&route=shorturl',
-    infoUrl: 'tagfelvetel.html',
+  const ELECTION = {
+    enabled: true,
+    infoUrl: 'valasztas.html',
     period: {
-      hu: '2026. 02. 25. – 2026. 03. 10.',
-      en: 'Feb 25 – Mar 10, 2026',
+      hu: '2026. 04. 02. - 2026. 05. 16.',
+      en: 'Apr 2 - May 16, 2026',
     },
   };
   // --- CONFIG VEGE ---
 
-  function initRecruitmentBanner() {
-    if (!RECRUITMENT.enabled) return;
+  function initElectionBanner() {
+    if (!ELECTION.enabled) return;
 
     const slot = document.getElementById('lead-banner-slot');
     if (!slot) return;
@@ -27,13 +26,12 @@
     const lang = document.documentElement.lang || 'hu';
     const isEn = lang.startsWith('en');
 
-    const title = isEn ? 'Join Us!' : 'Csatlakozz hozzánk!';
-    const subtitle = isEn ? 'HÖK is recruiting new members' : 'Legyél te is Hökös!';
-    const periodLabel = isEn ? 'Application period' : 'Jelentkezési időszak';
-    const period = isEn ? RECRUITMENT.period.en : RECRUITMENT.period.hu;
-    const btnApply = isEn ? 'Apply Now' : 'Jelentkezem';
-    const btnInfo = isEn ? 'Learn More' : 'Tudj meg többet';
-    const infoUrl = isEn ? RECRUITMENT.infoUrl.replace('.html', '_en.html') : RECRUITMENT.infoUrl;
+    const title = isEn ? 'Information about Elections' : 'Választási információk';
+    const subtitle = isEn ? 'Get to know more about Students\' Union Delegates Assembly election!' : 'Tudj meg többet a következő Küldöttgyűlés Választásról!';
+    const periodLabel = isEn ? 'Election period' : 'Választási időszak';
+    const period = isEn ? ELECTION.period.en : ELECTION.period.hu;
+    const btnInfo = isEn ? 'Learn More' : 'Információk';
+    const infoUrl = isEn ? ELECTION.infoUrl.replace('.html', '_en.html') : ELECTION.infoUrl;
 
     slot.innerHTML = `
       <section class="lead-banner-section">
@@ -57,11 +55,8 @@
                 </p>
               </div>
               <div class="lead-banner__action">
-                <a href="${RECRUITMENT.applyUrl}" class="lead-banner__btn lead-banner__btn--primary" target="_blank" rel="noopener noreferrer">
-                  ${btnApply} <i class="bi bi-arrow-right"></i>
-                </a>
-                <a href="${infoUrl}" class="lead-banner__btn lead-banner__btn--outline" target="_blank" rel="noopener noreferrer">
-                  ${btnInfo} <i class="bi bi-info-circle"></i>
+                <a href="${infoUrl}" class="lead-banner__btn lead-banner__btn--primary" target="_blank" rel="noopener noreferrer">
+                  ${btnInfo} <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -75,8 +70,8 @@
   }
 
   if (document.readyState === 'loading') {
-    window.addEventListener('load', initRecruitmentBanner);
+    window.addEventListener('load', initElectionBanner);
   } else {
-    initRecruitmentBanner();
+    initElectionBanner();
   }
 })();

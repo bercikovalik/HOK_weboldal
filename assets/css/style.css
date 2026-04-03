@@ -55,12 +55,14 @@
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Argentum Sans Regular';
   src: url('../fonts/argentum-sans.regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 /* Altalanos */
 body {
   font-family: var(--font-primary);
@@ -76,6 +78,7 @@ a:hover {
   color: var(--color-secondary);
   text-decoration: none;
 }
+
 .active_lang {
   color: var(--color-secondary);
 }
@@ -240,7 +243,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
   background: var(--color-accent);
   border-radius: var(--radius-lg);
   color: #fff !important;
@@ -278,7 +281,7 @@ h6 {
 }
 
 .navbar .dropdown ul a:hover,
-.navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul li:hover>a {
   background: var(--color-accent);
   color: #fff !important;
 }
@@ -290,13 +293,13 @@ h6 {
   color: var(--color-primary) !important;
 }
 
-.navbar .dropdown ul li:hover > a.scholarship-nav-link.active,
-.navbar-mobile .dropdown ul li:hover > a.scholarship-nav-link.active {
+.navbar .dropdown ul li:hover>a.scholarship-nav-link.active,
+.navbar-mobile .dropdown ul li:hover>a.scholarship-nav-link.active {
   background: var(--color-accent);
   color: #fff;
 }
 
-.navbar .dropdown:hover > ul {
+.navbar .dropdown:hover>ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -308,7 +311,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .dropdown .dropdown:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -320,7 +323,7 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover > ul {
+  .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
   }
 }
@@ -399,7 +402,7 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
   background: var(--color-accent);
   color: #fff !important;
 }
@@ -434,7 +437,7 @@ h6 {
 }
 
 .navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul li:hover>a {
   background: var(--color-accent);
   color: #fff !important;
 }
@@ -446,7 +449,7 @@ h6 {
   border-radius: var(--radius-lg);
 }
 
-.navbar-mobile .dropdown > .dropdown-active {
+.navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
 
@@ -702,7 +705,7 @@ section {
   position: relative;
 }
 
-.about .content ul li + li {
+.about .content ul li+li {
   margin-top: 10px;
 }
 
@@ -847,9 +850,11 @@ section {
   -webkit-transform: translate3d(0, 0, 0);
   clear: both;
 }
+
 .bar:nth-of-type(2n) {
   background: var(--color-accent);
 }
+
 .bar .label {
   font-size: 0.75em;
   padding: 1em;
@@ -861,6 +866,7 @@ section {
   font-weight: bold;
   font-family: var(--font-primary);
 }
+
 .bar .label.light {
   background: var(--color-primary);
 }
@@ -1238,7 +1244,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -1677,12 +1683,10 @@ section {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(191, 143, 85, 0.06),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(191, 143, 85, 0.06),
+      transparent);
   transition: left 0.6s ease;
   pointer-events: none;
 }
@@ -1725,7 +1729,8 @@ section {
 .contact-item__text p {
   margin-bottom: 0;
   font-size: 15px;
-  color: var(--color-text); /* muted text */
+  color: var(--color-text);
+  /* muted text */
 }
 
 .contact-item__text a {
@@ -1819,7 +1824,7 @@ section {
   border-radius: 10px;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -1944,11 +1949,11 @@ section {
   }
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
   color: #404356;
@@ -2247,6 +2252,7 @@ section {
 }
 
 @keyframes pulse-glow {
+
   0%,
   100% {
     transform: scale(1);
@@ -2255,6 +2261,7 @@ section {
       0 6px 24px rgba(0, 0, 0, 0.3),
       0 0 30px rgba(0, 0, 0, 0.2);
   }
+
   50% {
     transform: scale(1.15);
     box-shadow:
@@ -2667,14 +2674,17 @@ button[type='submit']:focus-visible {
 
 /* Shake */
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   20%,
   60% {
     transform: translateX(-5px);
   }
+
   40%,
   80% {
     transform: translateX(5px);
@@ -2776,18 +2786,23 @@ button[type='submit']:focus-visible {
 .navbar .dropdown ul li:nth-child(1) {
   transition-delay: 0.05s;
 }
+
 .navbar .dropdown ul li:nth-child(2) {
   transition-delay: 0.1s;
 }
+
 .navbar .dropdown ul li:nth-child(3) {
   transition-delay: 0.15s;
 }
+
 .navbar .dropdown ul li:nth-child(4) {
   transition-delay: 0.2s;
 }
+
 .navbar .dropdown ul li:nth-child(5) {
   transition-delay: 0.25s;
 }
+
 .navbar .dropdown ul li:nth-child(6) {
   transition-delay: 0.3s;
 }
@@ -2803,10 +2818,12 @@ button[type='submit']:focus-visible {
 }
 
 @keyframes bounce-up {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-3px);
   }
@@ -2944,40 +2961,74 @@ button[type='submit']:focus-visible {
 
 /* --- Keyframes --- */
 @keyframes bannerFadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes iconPulse {
-  0%, 100% { box-shadow: 0 0 0 8px rgba(16, 153, 179, 0.10), 0 0 0 16px rgba(16, 153, 179, 0.05); }
-  50% { box-shadow: 0 0 20px 8px rgba(16, 153, 179, 0.20), 0 0 0 16px rgba(16, 153, 179, 0.10); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 8px rgba(16, 153, 179, 0.10), 0 0 0 16px rgba(16, 153, 179, 0.05);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 8px rgba(16, 153, 179, 0.20), 0 0 0 16px rgba(16, 153, 179, 0.10);
+  }
 }
 
 @keyframes btnGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(191, 143, 85, 0.4); }
-  50% { box-shadow: 0 0 18px 6px rgba(191, 143, 85, 0.2); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(191, 143, 85, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 18px 6px rgba(191, 143, 85, 0.2);
+  }
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* --- Section wrapper --- */
-.tagfelvetel-banner-section {
+.lead-banner-section {
   padding: 40px 20px;
   position: relative;
   background: transparent;
 }
 
 /* --- Fo kartya --- */
-.tagfelvetel-banner {
+.lead-banner {
   position: relative;
   max-width: 1320px;
   margin: 0 auto;
@@ -2995,21 +3046,19 @@ button[type='submit']:focus-visible {
 }
 
 /* Shimmer overlay */
-.tagfelvetel-banner::before {
+.lead-banner::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 200%;
   height: 100%;
-  background: linear-gradient(
-    30deg,
-    transparent 40%,
-    rgba(255, 255, 255, 0.05) 44%,
-    rgba(255, 255, 255, 0.10) 50%,
-    rgba(255, 255, 255, 0.05) 56%,
-    transparent 60%
-  );
+  background: linear-gradient(30deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.05) 44%,
+      rgba(255, 255, 255, 0.10) 50%,
+      rgba(255, 255, 255, 0.05) 56%,
+      transparent 60%);
   animation: shimmer 4s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
@@ -3017,7 +3066,7 @@ button[type='submit']:focus-visible {
 }
 
 /* --- SVG hullamok a kartyan belul --- */
-.tagfelvetel-banner__wave {
+.lead-banner__wave {
   position: absolute;
   left: 0;
   width: 100%;
@@ -3026,23 +3075,23 @@ button[type='submit']:focus-visible {
   z-index: 0;
 }
 
-.tagfelvetel-banner__wave--top {
+.lead-banner__wave--top {
   top: 0;
 }
 
-.tagfelvetel-banner__wave--bottom {
+.lead-banner__wave--bottom {
   bottom: 0;
 }
 
 /* --- Dekorativ elemek --- */
-.tagfelvetel-banner__decor {
+.lead-banner__decor {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
 }
 
-.tagfelvetel-banner__decor--1 {
+.lead-banner__decor--1 {
   width: 220px;
   height: 220px;
   top: -70px;
@@ -3050,7 +3099,7 @@ button[type='submit']:focus-visible {
   border: 2px solid rgba(255, 255, 255, 0.07);
 }
 
-.tagfelvetel-banner__decor--2 {
+.lead-banner__decor--2 {
   width: 100px;
   height: 100px;
   bottom: -30px;
@@ -3058,7 +3107,7 @@ button[type='submit']:focus-visible {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.tagfelvetel-banner__decor--3 {
+.lead-banner__decor--3 {
   width: 350px;
   height: 350px;
   top: -170px;
@@ -3068,7 +3117,7 @@ button[type='submit']:focus-visible {
 }
 
 /* --- Tartalom --- */
-.tagfelvetel-banner__content {
+.lead-banner__content {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -3077,7 +3126,7 @@ button[type='submit']:focus-visible {
 }
 
 /* --- Ikon --- */
-.tagfelvetel-banner__icon {
+.lead-banner__icon {
   flex-shrink: 0;
   width: 80px;
   height: 80px;
@@ -3090,21 +3139,21 @@ button[type='submit']:focus-visible {
   transition: transform var(--transition-normal);
 }
 
-.tagfelvetel-banner__icon:hover {
+.lead-banner__icon:hover {
   transform: scale(1.08);
 }
 
-.tagfelvetel-banner__icon i {
+.lead-banner__icon i {
   font-size: 32px;
   color: var(--color-white);
 }
 
 /* --- Szoveg --- */
-.tagfelvetel-banner__text {
+.lead-banner__text {
   flex: 1;
 }
 
-.tagfelvetel-banner__title {
+.lead-banner__title {
   font-family: var(--font-bold);
   font-size: 32px;
   font-weight: 700;
@@ -3114,7 +3163,7 @@ button[type='submit']:focus-visible {
   letter-spacing: 2px;
 }
 
-.tagfelvetel-banner__subtitle {
+.lead-banner__subtitle {
   font-family: var(--font-primary);
   font-size: 17px;
   color: rgba(255, 255, 255, 0.85);
@@ -3122,7 +3171,7 @@ button[type='submit']:focus-visible {
   font-weight: 500;
 }
 
-.tagfelvetel-banner__details {
+.lead-banner__details {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
@@ -3131,20 +3180,20 @@ button[type='submit']:focus-visible {
   gap: 6px;
 }
 
-.tagfelvetel-banner__details i {
+.lead-banner__details i {
   color: var(--color-white);
   font-size: 16px;
 }
 
 /* --- Gombok --- */
-.tagfelvetel-banner__action {
+.lead-banner__action {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.tagfelvetel-banner__btn {
+.lead-banner__btn {
   font-family: var(--font-primary);
   text-transform: uppercase;
   font-weight: 700;
@@ -3161,52 +3210,52 @@ button[type='submit']:focus-visible {
   text-decoration: none;
 }
 
-.tagfelvetel-banner__btn i {
+.lead-banner__btn i {
   transition: transform var(--transition-normal);
 }
 
-.tagfelvetel-banner__btn:hover {
+.lead-banner__btn:hover {
   text-decoration: none;
   transform: translateY(-2px);
 }
 
-.tagfelvetel-banner__btn:active {
+.lead-banner__btn:active {
   transform: scale(0.97);
   transition: transform 0.1s ease;
 }
 
-.tagfelvetel-banner__btn:focus-visible {
+.lead-banner__btn:focus-visible {
   outline: 2px solid var(--color-secondary);
   outline-offset: 3px;
 }
 
 /* Primary gomb (Jelentkezem) */
-.tagfelvetel-banner__btn--primary {
+.lead-banner__btn--primary {
   color: var(--color-white);
   background: var(--color-secondary);
   border: 2px solid var(--color-secondary);
   animation: btnGlow 2.5s ease-in-out infinite;
 }
 
-.tagfelvetel-banner__btn--primary:hover {
+.lead-banner__btn--primary:hover {
   background: transparent;
   color: var(--color-white);
   border-color: var(--color-secondary);
   box-shadow: var(--shadow-lg);
 }
 
-.tagfelvetel-banner__btn--primary:hover i {
+.lead-banner__btn--primary:hover i {
   transform: translateX(4px);
 }
 
 /* Outline gomb (Tudj meg tobbet) */
-.tagfelvetel-banner__btn--outline {
+.lead-banner__btn--outline {
   color: var(--color-white);
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
-.tagfelvetel-banner__btn--outline:hover {
+.lead-banner__btn--outline:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--color-white);
   color: var(--color-white);
@@ -3217,120 +3266,120 @@ button[type='submit']:focus-visible {
    Recruitment Banner Responsive
    =========================== */
 @media (max-width: 991px) {
-  .tagfelvetel-banner-section {
+  .lead-banner-section {
     padding: 30px 16px;
   }
 
-  .tagfelvetel-banner__content {
+  .lead-banner__content {
     flex-wrap: wrap;
     gap: 20px;
   }
 
-  .tagfelvetel-banner__text {
+  .lead-banner__text {
     flex: 1 1 calc(100% - 110px);
   }
 
-  .tagfelvetel-banner__action {
+  .lead-banner__action {
     flex-direction: row;
     width: 100%;
     gap: 12px;
   }
 
-  .tagfelvetel-banner__btn {
+  .lead-banner__btn {
     flex: 1;
   }
 }
 
 @media (max-width: 768px) {
-  .tagfelvetel-banner-section {
+  .lead-banner-section {
     padding: 24px 12px;
   }
 
-  .tagfelvetel-banner {
+  .lead-banner {
     padding: 35px 24px;
     border-radius: 16px;
   }
 
-  .tagfelvetel-banner::before {
+  .lead-banner::before {
     border-radius: 16px;
   }
 
-  .tagfelvetel-banner__content {
+  .lead-banner__content {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
 
-  .tagfelvetel-banner__icon {
+  .lead-banner__icon {
     width: 60px;
     height: 60px;
   }
 
-  .tagfelvetel-banner__icon i {
+  .lead-banner__icon i {
     font-size: 26px;
   }
 
-  .tagfelvetel-banner__title {
+  .lead-banner__title {
     font-size: 24px;
     letter-spacing: 1px;
   }
 
-  .tagfelvetel-banner__subtitle {
+  .lead-banner__subtitle {
     font-size: 15px;
   }
 
-  .tagfelvetel-banner__details {
+  .lead-banner__details {
     font-size: 13px;
   }
 
-  .tagfelvetel-banner__action {
+  .lead-banner__action {
     flex-direction: column;
     width: 100%;
   }
 
-  .tagfelvetel-banner__btn {
+  .lead-banner__btn {
     width: 100%;
     padding: 14px 24px;
   }
 
-  .tagfelvetel-banner__decor--1 {
+  .lead-banner__decor--1 {
     width: 120px;
     height: 120px;
     top: -40px;
     right: -30px;
   }
 
-  .tagfelvetel-banner__decor--2 {
+  .lead-banner__decor--2 {
     width: 60px;
     height: 60px;
     bottom: -20px;
     left: 30px;
   }
 
-  .tagfelvetel-banner__decor--3 {
+  .lead-banner__decor--3 {
     display: none;
   }
 
-  .tagfelvetel-banner__wave {
+  .lead-banner__wave {
     height: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .tagfelvetel-banner-section {
+  .lead-banner-section {
     padding: 20px 10px;
   }
 
-  .tagfelvetel-banner {
+  .lead-banner {
     padding: 28px 18px;
     border-radius: 12px;
   }
 
-  .tagfelvetel-banner::before {
+  .lead-banner::before {
     border-radius: 12px;
   }
 
-  .tagfelvetel-banner__title {
+  .lead-banner__title {
     font-size: 20px;
   }
 }
@@ -3353,6 +3402,7 @@ button[type='submit']:focus-visible {
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
