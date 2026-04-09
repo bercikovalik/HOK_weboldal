@@ -1,4 +1,28 @@
+:root {
+    --color-elections-primary: #751101;
+    --color-elections-secondary: #ff5757;
+}
+
 /* ====== Elections Page Styles ====== */
+
+#header,
+.subpage-header {
+    background: var(--color-elections-primary);
+}
+
+#header.header-scrolled {
+    background: var(--color-elections-primary);
+    opacity: 0.9;
+}
+
+.navbar .active {
+    background-color: var(--color-elections-secondary);
+}
+
+.navbar .active:hover {
+    background-color: var(--color-elections-secondary);
+    opacity: 0.9;
+}
 
 /* Navigation cards */
 .nav-cards-container {
@@ -15,7 +39,7 @@
     min-width: 200px;
     max-width: 250px;
     padding: 25px 20px;
-    background: linear-gradient(135deg, #12a8c2 0%, #1099b3 50%, #12a8c2 100%);
+    background: linear-gradient(135deg, #b22c24 0%, #a22f40 50%, #55282e 100%);
     background-size: 200% 200%;
     border-radius: 20px;
     cursor: pointer;
@@ -158,7 +182,7 @@
     top: 50px;
     width: 2px;
     height: calc(100% + 30px);
-    background: var(--color-secondary);
+    background: var(--color-elections-secondary);
 }
 
 .timeline-item:last-child::before {
@@ -169,7 +193,7 @@
     min-width: 50px;
     width: 50px;
     height: 50px;
-    background: var(--color-secondary);
+    background: var(--color-elections-secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -186,13 +210,13 @@
     margin-left: 30px;
     padding: 15px;
     background: #f8f9fa;
-    border-left: 3px solid var(--color-accent);
+    border-left: 3px solid var(--color-elections-primary);
     border-radius: 4px;
     flex-grow: 1;
 }
 
 .timeline-content h5 {
-    color: var(--color-primary);
+    color: var(--color-elections-primary);
     margin: 0 0 5px 0;
     font-weight: 600;
 }
@@ -213,7 +237,7 @@
 
 .contact-card {
     background: white;
-    border: 2px solid var(--color-secondary);
+    border: 2px solid var(--color-elections-primary);
     border-radius: 12px;
     padding: 25px;
     text-align: center;
@@ -224,11 +248,11 @@
 .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border-color: var(--color-accent);
+    border-color: var(--color-elections-primary);
 }
 
 .contact-card h5 {
-    color: var(--color-primary);
+    color: var(--color-elections-primary);
     margin: 0 0 15px 0;
     font-weight: 600;
     font-size: 18px;
@@ -245,18 +269,18 @@
 }
 
 .contact-card p i {
-    color: var(--color-secondary);
+    color: var(--color-elections-secondary);
     font-size: 18px;
 }
 
 .contact-card a {
-    color: var(--color-secondary);
+    color: var(--color-elections-secondary);
     text-decoration: none;
     transition: color var(--transition-normal);
 }
 
 .contact-card a:hover {
-    color: var(--color-accent);
+    color: var(--color-elections-secondary);
     text-decoration: underline;
 }
 
@@ -286,7 +310,7 @@
 
 .expandable-header h5 {
     margin: 0;
-    color: var(--color-primary);
+    color: var(--color-elections-primary);
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -295,7 +319,7 @@
 
 .expandable-icon {
     transition: transform var(--transition-fast);
-    color: var(--color-secondary);
+    color: var(--color-elections-secondary);
     font-size: 20px;
 }
 
@@ -335,7 +359,7 @@
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--color-secondary);
+    color: var(--color-elections-secondary);
     font-weight: bold;
     font-size: 16px;
 }
@@ -362,7 +386,7 @@
     left: 0;
     width: 30px;
     height: 30px;
-    background: var(--color-secondary);
+    background: var(--color-elections-secondary);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -390,14 +414,14 @@
     content: '◦';
     position: absolute;
     left: -15px;
-    color: var(--color-secondary);
+    color: var(--color-elections-secondary);
     font-weight: bold;
     font-size: 18px;
 }
 
 .highlight-box {
     background: linear-gradient(90deg, rgba(191, 143, 85, 0.1), rgba(16, 153, 179, 0.1));
-    border-left: 4px solid var(--color-secondary);
+    border-left: 4px solid var(--color-elections-secondary);
     padding: 20px;
     border-radius: 4px;
     margin: 20px 0;
@@ -437,7 +461,7 @@
 }
 
 .list-header {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    background: linear-gradient(135deg, var(--color-elections-primary), var(--color-elections-secondary));
     color: white;
     padding: 20px;
     font-weight: 600;
@@ -471,14 +495,14 @@
 
 .list-item.active {
     background: rgba(16, 153, 179, 0.1);
-    border-left: 4px solid var(--color-secondary);
-    color: var(--color-primary);
+    border-left: 4px solid var(--color-elections-secondary);
+    color: var(--color-elections-primary);
     font-weight: 600;
 }
 
 .list-item i {
     font-size: 18px;
-    color: var(--color-secondary);
+    color: var(--color-elections-secondary);
     flex-shrink: 0;
 }
 
@@ -520,7 +544,7 @@
 .profile-avatar {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    background: linear-gradient(135deg, var(--color-elections-primary), var(--color-elections-secondary));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -532,13 +556,13 @@
 
 .profile-basic h3 {
     margin: 0 0 5px 0;
-    color: var(--color-primary);
+    color: var(--color-elections-primary);
     font-weight: 600;
 }
 
 .profile-basic .position {
     margin: 0 0 3px 0;
-    color: var(--color-secondary);
+    color: var(--color-elections-secondary);
     font-weight: 600;
     font-size: 14px;
 }
@@ -552,7 +576,7 @@
 .profile-details h4,
 .details-content h4 {
     margin: 20px 0 10px 0;
-    color: var(--color-primary);
+    color: var(--color-elections-primary);
     font-weight: 600;
     font-size: 15px;
 }
@@ -585,7 +609,7 @@
     content: '▸';
     position: absolute;
     left: 0;
-    color: var(--color-secondary);
+    color: var(--color-elections-secondary);
     font-weight: bold;
 }
 
