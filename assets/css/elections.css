@@ -130,6 +130,45 @@
     color: white;
 }
 
+/* Content button */
+.elections-btn {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: var(--color-elections-primary);
+    border: 2px solid var(--color-elections-primary);
+    text-decoration: none;
+}
+
+.elections-btn:hover {
+    background: var(--color-elections-primary);
+    color: white;
+    text-decoration: none;
+}
+
+.elections-btn i {
+    font-size: 13px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+/* Content h2 subheading */
+.content-h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-elections-primary);
+    border-left: 4px solid var(--color-elections-secondary);
+    padding-left: 14px;
+    margin: 30px 0 15px 0;
+    font-family: var(--font-primary);
+    letter-spacing: 0.3px;
+}
+
 /* Timeline */
 .timeline {
     position: relative;
